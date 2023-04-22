@@ -12,45 +12,35 @@
         android:id="@+id/view6"
         android:layout_width="360sp"
         android:layout_height="90sp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="152dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="34dp"
         android:background="#353535"
-        app:layout_constraintBottom_toTopOf="@+id/view8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/view8"
+        android:layout_marginBottom="10dp"
+        />
 
     <View
         android:id="@+id/view8"
         android:layout_width="360sp"
         android:layout_height="90sp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="276dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="38dp"
+
         android:background="#353535"
-        app:layout_constraintBottom_toTopOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="150dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/view7"
         android:layout_width="360sp"
         android:layout_height="90sp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="404dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="253dp"
         android:background="#353535"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/view8"
+        />
 
     <TextView
         android:id="@+id/textView3"
@@ -82,7 +72,7 @@
         android:layout_width="340sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/montserrat_semibold"
         android:text="Ваше событие собрало достаточное количество участников"
         android:textColor="#FFFFFF"
@@ -119,14 +109,13 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="464dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="12dp"
         android:fontFamily="@font/montserrat"
         android:text="16.04.2023"
         android:textColor="#9E9E9E"
         app:layout_constraintEnd_toEndOf="@+id/view7"
-        app:layout_constraintHorizontal_bias="0.958"
-        app:layout_constraintStart_toStartOf="@+id/view7"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/view7" />
 
     <ImageView
         android:id="@+id/imageView"
