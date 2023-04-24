@@ -68,6 +68,8 @@
             app:layout_constraintTop_toTopOf="parent"
             ></View>
 
+
+
         <EditText
             android:id="@+id/email_edittext"
             android:layout_width="match_parent"
