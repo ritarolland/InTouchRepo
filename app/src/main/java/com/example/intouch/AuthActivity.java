@@ -20,6 +20,7 @@ public class AuthActivity extends AppCompatActivity {
     ActivityAuthBinding activityAuthBinding;
     private FirebaseAuth mAuth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
