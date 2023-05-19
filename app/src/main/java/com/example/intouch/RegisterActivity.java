@@ -17,10 +17,14 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
     ActivityRegisterBinding activityRegisterBinding;
+    private FirebaseDatabase inTouchDataBase;
     private FirebaseAuth mAuth;
+    private DatabaseReference users;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void init() {
         mAuth = FirebaseAuth.getInstance();
+        inTouchDataBase = FirebaseDatabase.getInstance();
+        users = inTouchDataBase.getReference("Users");
     }
 
     public void onClickSignInNow(View view) {
@@ -49,15 +55,23 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void onClickSignUp(View view) {
-        if(!TextUtils.isEmpty(activityRegisterBinding.emailEdittext.getText().toString())
-        && !TextUtils.isEmpty(activityRegisterBinding.passwordEdittext.getText().toString())) {
+        String email, password, name;
+        email = activityRegisterBinding.emailEdittext.getText().toString();
+        password = activityRegisterBinding.passwordEdittext.getText().toString();
+        name = activityRegisterBinding.nameEdittext.getText().toString();
+        if(!TextUtils.isEmpty(email)
+        && !TextUtils.isEmpty(password)
+        && !TextUtils.isEmpty(name)) {
 
             mAuth.createUserWithEmailAndPassword(activityRegisterBinding.emailEdittext.getText().toString(),
                     activityRegisterBinding.passwordEdittext.getText().toString())
                     .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override
                         public void onSuccess(AuthResult authResult) {
-                            if(mAuth.getCurrentUser() != null) {
+                            FirebaseUser currentUser = mAuth.getCurrentUser();
+                            if(currentUser != null) {
+                                User newUser = new User(currentUser.getUid(), email, password, name);
+                                users.child(currentUser.getUid()).setValue(newUser);
                                 startActivity(new Intent(getApplicationContext(), Home.class));
                             }
                             Toast.makeText(getApplicationContext(), "Signed up successfully", Toast.LENGTH_SHORT).show();

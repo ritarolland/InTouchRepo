@@ -27,14 +27,18 @@ public class MessengerActivity extends AppCompatActivity {
     }
 
     private void setInitialData(){
-        for(int i = 0; i < 5; i++) {
+        /*for(int i = 0; i < 5; i++) {
             chats.add(new User ("Вероника", R.drawable.logo));
             chats.add(new User ("Соня", R.drawable.logo));
             chats.add(new User ("Дядя Федор", R.drawable.logo));
             chats.add(new User ("Вероника", R.drawable.logo));
             chats.add(new User ("Лиза", R.drawable.logo));
-        }
+        }*/
 
+
+    }
+
+    public void onClickNewChat() {
 
     }
 }
