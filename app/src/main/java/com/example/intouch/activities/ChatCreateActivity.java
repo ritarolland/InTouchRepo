@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.intouch.adapters.ChatCreateAdapter;
@@ -12,6 +13,7 @@ import com.example.intouch.adapters.MessengerAdapter;
 import com.example.intouch.databinding.ActivityChatCreateBinding;
 import com.example.intouch.models.User;
 import com.example.intouch.utils.Constants;
+import com.example.intouch.utils.PreferenceManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -25,7 +27,7 @@ import java.util.List;
 
 public class ChatCreateActivity extends AppCompatActivity {
     ActivityChatCreateBinding activityChatCreateBinding;
-    List<User> users;
+    PreferenceManager preferenceManager;
     FirebaseDatabase inTouchDataBase = FirebaseDatabase.getInstance();
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
@@ -34,44 +36,54 @@ public class ChatCreateActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        preferenceManager = new PreferenceManager(getApplicationContext());
         activityChatCreateBinding = ActivityChatCreateBinding.inflate(getLayoutInflater());
         setContentView(activityChatCreateBinding.getRoot());
         setInitialData();
-
-        /*if(!users.isEmpty()) {
-            ChatCreateAdapter chatCreateAdapter = new ChatCreateAdapter(this.getLayoutInflater(), users);
-            activityChatCreateBinding.users.setAdapter(chatCreateAdapter);
-        }*/
     }
 
 
     private void setInitialData() {
+
         inTouchDataBase.getReference(Constants.KEY_COLLECTION_USERS).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
 
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
+                ArrayList<User> users = new ArrayList<>();
 
-                if(task.isSuccessful() && task.getResult() != null) {
-
+                if (task.isSuccessful() && task.getResult() != null) {
                     FirebaseUser currentUser = mAuth.getCurrentUser();
-                    String currentUserId = currentUser.getUid().toString();
-                    users = new ArrayList<>();
+                    //String currentUserId = preferenceManager.getString(Constants.KEY_USER_ID);
+                    String currentUserId = currentUser.getUid();
+
                     DataSnapshot dataSnapshot = task.getResult();
-                    Toast.makeText(getApplicationContext(), "success", Toast.LENGTH_SHORT).show();
-                    for(DataSnapshot childSnapshot : dataSnapshot.getChildren()) {
-                        /*String id = childSnapshot.
-                        *//*if(currentUserId.equals(id)) {
+
+                    for (DataSnapshot childSnapshot : dataSnapshot.getChildren()) {
+                        if (currentUserId.equals(childSnapshot.getKey())) {
                             continue;
                         }
-                        *//*String email = childSnapshot.child(Constants.KEY_USER_EMAIL).getValue().toString();
-//                        String password = childSnapshot.child(Constants.KEY_USER_PASSWORD).getValue().toString();
-//                        String name = childSnapshot.child(Constants.KEY_USER_NAME).getValue().toString();
-//                        User user = new User(id, email, password, name);
-//                        users.add(user);*/
+                        String email = childSnapshot.child(Constants.KEY_USER_EMAIL).getValue().toString();
+
+                        String password = childSnapshot.child(Constants.KEY_USER_PASSWORD).getValue().toString();
+                        String name = childSnapshot.child(Constants.KEY_USER_NAME).getValue().toString();
+                        String id = childSnapshot.getKey();
+
+                        users.add(new User(id, email, password, name));
+
                     }
 
+
                 }
+                RecyclerView recyclerView = activityChatCreateBinding.users;
+                ChatCreateAdapter chatCreateAdapter = new ChatCreateAdapter(getLayoutInflater(), users);
+                recyclerView.setAdapter(chatCreateAdapter);
+
+
+
+
+
             }
         });
+
     }
 }

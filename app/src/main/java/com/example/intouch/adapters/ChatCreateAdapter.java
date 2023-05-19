@@ -33,9 +33,9 @@ public class ChatCreateAdapter extends RecyclerView.Adapter<ChatCreateAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ChatCreateAdapter.ViewHolder holder, int position) {
-        User chat = users.get(position);
-        holder.avatarView.setImageResource(chat.getAvatar());
-        holder.nameView.setText(chat.getUserName());
+        User user = users.get(position);
+        holder.avatarView.setImageResource(user.getAvatar());
+        holder.nameView.setText(user.getUserName());
     }
 
     @Override
