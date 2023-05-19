@@ -1,4 +1,4 @@
-package com.example.intouch;
+package com.example.intouch.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,10 +10,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.intouch.databinding.ActivityRegisterBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
+import com.example.intouch.models.User;
+import com.example.intouch.utils.Constants;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -47,7 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void init() {
         mAuth = FirebaseAuth.getInstance();
         inTouchDataBase = FirebaseDatabase.getInstance();
-        users = inTouchDataBase.getReference("Users");
+        users = inTouchDataBase.getReference(Constants.KEY_COLLECTION_USERS);
     }
 
     public void onClickSignInNow(View view) {

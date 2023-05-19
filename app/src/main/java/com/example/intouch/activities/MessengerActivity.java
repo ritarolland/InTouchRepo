@@ -1,12 +1,15 @@
-package com.example.intouch;
+package com.example.intouch.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.intouch.adapters.MessengerAdapter;
 import com.example.intouch.databinding.ActivityMessengerBinding;
+import com.example.intouch.models.User;
 
 import java.util.ArrayList;
 
@@ -20,7 +23,7 @@ public class MessengerActivity extends AppCompatActivity {
         activityMessengerBinding = ActivityMessengerBinding.inflate(getLayoutInflater());
         View view = activityMessengerBinding.getRoot();
         setContentView(view);
-        setInitialData();
+        //setInitialData();
         RecyclerView recyclerView = activityMessengerBinding.chats;
         MessengerAdapter messengerAdapter = new MessengerAdapter(this.getLayoutInflater(), chats);
         recyclerView.setAdapter(messengerAdapter);
@@ -38,7 +41,7 @@ public class MessengerActivity extends AppCompatActivity {
 
     }
 
-    public void onClickNewChat() {
-
+    public void onClickNewChat(View view) {
+        startActivity(new Intent(this, ChatCreateActivity.class));
     }
 }

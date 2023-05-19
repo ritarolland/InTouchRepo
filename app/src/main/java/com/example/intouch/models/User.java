@@ -1,5 +1,6 @@
-package com.example.intouch;
+package com.example.intouch.models;
 
+import com.example.intouch.R;
 import com.google.firebase.auth.FirebaseUser;
 
 public class User {

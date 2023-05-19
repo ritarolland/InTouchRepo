@@ -1,4 +1,4 @@
-package com.example.intouch;
+package com.example.intouch.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
