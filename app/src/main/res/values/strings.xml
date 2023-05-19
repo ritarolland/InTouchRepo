@@ -1,7 +1,3 @@
 <resources>
     <string name="app_name">InTouch</string>
-    <string name="title_activity_scrolling_main">ScrollingMainActivity</string>
-    <string name="large_text">
-    </string>
-    <string name="action_settings">Settings</string>
 </resources>
