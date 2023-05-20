@@ -9,5 +9,6 @@ public class Constants {
     public static final String KEY_USER_AVATAR = "avatar";
     public static final String KEY_USER_SEX = "sex";
     public static final String PREFERENCE_NAME = "inTouchPreference";
+    public static final String KEY_USER = "user";
 
 }

@@ -9,33 +9,32 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.intouch.databinding.ChatItemBinding;
+import com.example.intouch.listeners.UserListener;
 import com.example.intouch.models.User;
 
 import java.util.List;
 
 public class ChatCreateAdapter extends RecyclerView.Adapter<ChatCreateAdapter.ViewHolder>{
 
-    private final LayoutInflater inflater;
     private final List<User> users;
+    private final UserListener userListener;
 
 
-    public ChatCreateAdapter(LayoutInflater inflater, List<User> users) {
-        this.inflater = inflater;
+    public ChatCreateAdapter(List<User> users, UserListener userListener) {
         this.users = users;
+        this.userListener = userListener;
     }
 
     @NonNull
     @Override
     public ChatCreateAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ChatItemBinding chatItemBinding = ChatItemBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
-        return new ChatCreateAdapter.ViewHolder(chatItemBinding);
+        return new ViewHolder(chatItemBinding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ChatCreateAdapter.ViewHolder holder, int position) {
         User user = users.get(position);
-        holder.avatarView.setImageResource(user.getAvatar());
-        holder.nameView.setText(user.getUserName());
     }
 
     @Override
@@ -43,15 +42,18 @@ public class ChatCreateAdapter extends RecyclerView.Adapter<ChatCreateAdapter.Vi
         return users.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        final ChatItemBinding binding;
-        final ImageView avatarView;
-        final TextView nameView;
+    class ViewHolder extends RecyclerView.ViewHolder {
+        ChatItemBinding binding;
         ViewHolder(ChatItemBinding chatItemBinding){
             super(chatItemBinding.getRoot());
             binding = chatItemBinding;
-            avatarView = chatItemBinding.avatar;
-            nameView = chatItemBinding.name;
+
         }
+        void setUserData(User user) {
+            binding.avatar.setImageResource(user.getAvatar());
+            binding.name.setText(user.getUserName());
+            binding.getRoot().setOnClickListener(v -> userListener.onUserClick(user));
+        }
+
     }
 }

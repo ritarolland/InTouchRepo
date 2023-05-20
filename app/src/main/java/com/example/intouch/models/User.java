@@ -1,9 +1,15 @@
 package com.example.intouch.models;
 
+import android.os.Build;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
 import com.example.intouch.R;
 import com.google.firebase.auth.FirebaseUser;
 
-public class User {
+public class User implements Parcelable {
 
     private String userEmail, userPassword, userName, id;
     private int avatar = R.drawable.logo;
@@ -52,5 +58,42 @@ public class User {
         this.userName = userName;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeString(userEmail);
+        dest.writeString(userName);
+        dest.writeString(userPassword);
+        dest.writeString(id);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            dest.writeBoolean(sex);
+        }
+        dest.writeInt(avatar);
+    }
+
+    public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>() {
+        public User createFromParcel(Parcel in) {
+            return new User(in);
+        }
+
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
+
+    private User(Parcel in) {
+        avatar = in.readInt();
+        userEmail = in.readString();
+        userName = in.readString();
+        userPassword = in.readString();
+        id = in.readString();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            sex = in.readBoolean();
+        }
+    }
 }
 
