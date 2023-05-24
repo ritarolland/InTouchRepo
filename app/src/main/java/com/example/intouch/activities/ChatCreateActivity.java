@@ -41,7 +41,13 @@ public class ChatCreateActivity extends AppCompatActivity implements UserListene
         preferenceManager = new PreferenceManager(getApplicationContext());
         activityChatCreateBinding = ActivityChatCreateBinding.inflate(getLayoutInflater());
         setContentView(activityChatCreateBinding.getRoot());
+        //setListeners();
         setInitialData();
+
+    }
+
+    private void setListeners() {
+
     }
 
 
@@ -55,7 +61,6 @@ public class ChatCreateActivity extends AppCompatActivity implements UserListene
 
                 if (task.isSuccessful() && task.getResult() != null) {
                     FirebaseUser currentUser = mAuth.getCurrentUser();
-                    //String currentUserId = preferenceManager.getString(Constants.KEY_USER_ID);
                     String currentUserId = currentUser.getUid();
 
                     DataSnapshot dataSnapshot = task.getResult();
@@ -78,6 +83,7 @@ public class ChatCreateActivity extends AppCompatActivity implements UserListene
                 }
                 RecyclerView recyclerView = activityChatCreateBinding.users;
                 ChatCreateAdapter chatCreateAdapter = new ChatCreateAdapter(users, ChatCreateActivity.this);
+
                 recyclerView.setAdapter(chatCreateAdapter);
 
 
@@ -88,6 +94,9 @@ public class ChatCreateActivity extends AppCompatActivity implements UserListene
         });
 
     }
+
+
+
 
     @Override
     public void onUserClick(User user) {

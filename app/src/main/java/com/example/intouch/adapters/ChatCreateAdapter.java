@@ -34,7 +34,7 @@ public class ChatCreateAdapter extends RecyclerView.Adapter<ChatCreateAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ChatCreateAdapter.ViewHolder holder, int position) {
-        User user = users.get(position);
+        holder.setUserData(users.get(position));
     }
 
     @Override

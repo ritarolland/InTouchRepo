@@ -9,7 +9,10 @@ import androidx.annotation.NonNull;
 import com.example.intouch.R;
 import com.google.firebase.auth.FirebaseUser;
 
-public class User implements Parcelable {
+import java.io.Serializable;
+
+public class User implements Serializable {
+
 
     private String userEmail, userPassword, userName, id;
     private int avatar = R.drawable.logo;
@@ -58,7 +61,7 @@ public class User implements Parcelable {
         this.userName = userName;
     }
 
-    @Override
+    /*@Override
     public int describeContents() {
         return 0;
     }
@@ -94,6 +97,6 @@ public class User implements Parcelable {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             sex = in.readBoolean();
         }
-    }
+    }*/
 }
 

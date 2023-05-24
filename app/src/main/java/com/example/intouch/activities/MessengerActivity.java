@@ -1,13 +1,12 @@
 package com.example.intouch.activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.intouch.adapters.MessengerAdapter;
 import com.example.intouch.databinding.ActivityMessengerBinding;
@@ -48,7 +47,6 @@ public class MessengerActivity extends AppCompatActivity {
 
                 if (task.isSuccessful() && task.getResult() != null) {
                     FirebaseUser currentUser = mAuth.getCurrentUser();
-                    //String currentUserId = preferenceManager.getString(Constants.KEY_USER_ID);
                     String currentUserId = currentUser.getUid();
 
                     DataSnapshot dataSnapshot = task.getResult();
