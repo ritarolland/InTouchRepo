@@ -20,28 +20,38 @@ public class AuthActivity extends AppCompatActivity {
         activityAuthBinding = ActivityAuthBinding.inflate(getLayoutInflater());
         View view = activityAuthBinding.getRoot();
         setContentView(view);
-        init();
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null) {
+    public void OnClick2(View view){
 
-        }
-    }
-
-    public void onClickSignUpNow(View view) {
-        startActivity(new Intent(this, RegisterActivity.class));
-    }
-
-    private void init() {
-        mAuth = FirebaseAuth.getInstance();
-    }
-
-    public void onClickSignIn() {
+        Intent intent = new Intent(AuthActivity.this, RegisterActivity.class);
+        startActivity(intent);
 
     }
-
 }
+////        init();
+//    }
+//}
+
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+////        if(currentUser != null) {
+////
+////        }
+//    }
+//
+//    public void onClickSignUpNow(View view) {
+//        startActivity(new Intent(this, RegisterActivity.class));
+//    }
+//
+//    private void init() {
+//        mAuth = FirebaseAuth.getInstance();
+//    }
+//
+////    public void onClickSignIn() {
+////
+////    }
+//
+//}
