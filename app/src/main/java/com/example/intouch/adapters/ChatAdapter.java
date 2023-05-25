@@ -27,22 +27,21 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new SentMessageViewHolder(ItemContainerSentMessageBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
-        /*if(viewType == VIEW_TYPE_SENT) {
+
+        if(viewType == VIEW_TYPE_SENT) {
             return new SentMessageViewHolder(ItemContainerSentMessageBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
         } else {
-            return new ReceivedMessageHolder(ItemContainerReceivedMessageBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
-        }*/
+            return new ReceivedMessageHolder(ItemContainerResievedMessageBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
+        }
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        ((SentMessageViewHolder) holder).setData(chatMessages.get(position));
-        /*if(getItemViewType(position) == VIEW_TYPE_SENT) {
+        if(getItemViewType(position) == VIEW_TYPE_SENT) {
             ((SentMessageViewHolder) holder).setData(chatMessages.get(position));
         } else {
             ((ReceivedMessageHolder) holder).setData(chatMessages.get(position));
-        }*/
+        }
     }
 
     @Override
@@ -70,7 +69,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         void setData(ChatMessage chatMessage) {
             binding.message.setText(chatMessage.getMessage());
-            //binding.dataTime.setText(chatMessage.getDateTime());
+            binding.dataTime.setText(chatMessage.getDateTime());
         }
 
     }

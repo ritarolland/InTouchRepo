@@ -3,11 +3,14 @@ package com.example.intouch.activities;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.intouch.adapters.ChatAdapter;
+import com.example.intouch.adapters.ChatCreateAdapter;
+import com.example.intouch.adapters.MessengerAdapter;
 import com.example.intouch.databinding.ActivityChatBinding;
 import com.example.intouch.databinding.ActivityChatCreateBinding;
 import com.example.intouch.models.ChatMessage;
@@ -34,10 +37,11 @@ public class ChatActivity extends AppCompatActivity {
     private User receiverUser;
 
     private ChatAdapter chatAdapter;
-    private FirebaseDatabase inTouchDatabase = FirebaseDatabase.getInstance();
-    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    private DatabaseReference databaseReference = inTouchDatabase.getReference(Constants.KEY_COLLECTION_CHAT);
-    private List<ChatMessage> chatMessages = new ArrayList<>();
+
+    private FirebaseDatabase inTouchDatabase;
+    private FirebaseAuth mAuth;
+    private DatabaseReference databaseReference;
+    private List<ChatMessage> chatMessages;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,20 +53,19 @@ public class ChatActivity extends AppCompatActivity {
         loadReceiverDetails();
         init();
 
-
         databaseReference.addChildEventListener(new ChildEventListener() {
 
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                /*DataSnapshot childSnapshot = snapshot;
+                DataSnapshot childSnapshot = snapshot;
                 String senderId = childSnapshot.child(Constants.KEY_SENDER_ID).getValue().toString();
                 String receiverId = childSnapshot.child(Constants.KEY_RECEIVER_ID).getValue().toString();
                 String message = childSnapshot.child(Constants.KEY_MESSAGE).getValue().toString();
-                //Date dateObject = (Date) childSnapshot.child(Constants.KEY_TIMESTAMP).getValue();
-                ChatMessage chatMessage = new ChatMessage(senderId, receiverId, message, "now");
-                chatMessages.add(chatMessage);*/
-                chatMessages.add(new ChatMessage("1", "2", "message", "now"));
-                //chatAdapter.notifyDataSetChanged();
+                Date dateObject = childSnapshot.child(Constants.KEY_TIMESTAMP).getValue(Date.class);
+                String dateTime = getReadableDateTime(dateObject);
+                ChatMessage chatMessage = new ChatMessage(senderId, receiverId, message, dateTime);
+                chatMessages.add(chatMessage);
+                chatAdapter.notifyDataSetChanged();
 
             }
 
@@ -87,23 +90,18 @@ public class ChatActivity extends AppCompatActivity {
             }
 
         });
-        chatMessages.add(new ChatMessage("1", "2", "message", "now"));
+    }
+
+    private void init() {
+        inTouchDatabase = FirebaseDatabase.getInstance();
+        mAuth = FirebaseAuth.getInstance();
+        databaseReference = inTouchDatabase.getReference(Constants.KEY_COLLECTION_CHAT);
+        chatMessages = new ArrayList<>();
         chatAdapter = new ChatAdapter(
                 chatMessages,
                 mAuth.getCurrentUser().getUid().toString()
         );
         activityChatBinding.chatRecyclerview.setAdapter(chatAdapter);
-        //chatAdapter.notifyDataSetChanged();
-        Integer i = chatMessages.size();
-        String s = i.toString();
-        Toast.makeText(getApplicationContext(), chatMessages.get(0).getMessage(), Toast.LENGTH_SHORT).show();
-
-        //inTouchDatabase.getReference(Constants.KEY_COLLECTION_CHAT).addListenerForSingleValueEvent(eventListener);
-    }
-
-    private void init() {
-
-
     }
 
     private void sendMessage() {
@@ -117,31 +115,6 @@ public class ChatActivity extends AppCompatActivity {
     }
 
 
-
-   /* private final ValueEventListener eventListener = new ValueEventListener() {
-        @Override
-        public void onDataChange(@NonNull DataSnapshot snapshot) {
-            *//*chatMessages.clear();
-            for(DataSnapshot childSnapshot : snapshot.getChildren()) {
-                String senderId = childSnapshot.child(Constants.KEY_SENDER_ID).getValue().toString();
-                String receiverId = childSnapshot.child(Constants.KEY_RECEIVER_ID).getValue().toString();
-                String message = childSnapshot.child(Constants.KEY_MESSAGE).getValue().toString();
-                //Date dateObject = (Date) childSnapshot.child(Constants.KEY_TIMESTAMP).getValue();
-                ChatMessage chatMessage = new ChatMessage(senderId, receiverId, message, "now");
-                chatMessages.add(chatMessage);
-            }*//*
-
-            chatAdapter.notifyDataSetChanged();
-        }
-
-        @Override
-        public void onCancelled(@NonNull DatabaseError error) {
-
-        }
-    };
-*/
-
-
     private void loadReceiverDetails() {
         receiverUser = (User) getIntent().getSerializableExtra(Constants.KEY_USER);
         activityChatBinding.friendName.setText(receiverUser.getUserName());
@@ -153,6 +126,6 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     private String getReadableDateTime(Date date) {
-        return new SimpleDateFormat("MMMM dd, yyyy - hh:mm a", Locale.getDefault()).format(date);
+        return new SimpleDateFormat("hh:mm a dd MMMM", Locale.getDefault()).format(date);
     }
 }

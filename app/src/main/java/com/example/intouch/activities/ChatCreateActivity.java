@@ -38,7 +38,7 @@ public class ChatCreateActivity extends AppCompatActivity implements UserListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        preferenceManager = new PreferenceManager(getApplicationContext());
+        //preferenceManager = new PreferenceManager(getApplicationContext());
         activityChatCreateBinding = ActivityChatCreateBinding.inflate(getLayoutInflater());
         setContentView(activityChatCreateBinding.getRoot());
         //setListeners();
