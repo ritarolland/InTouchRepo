@@ -33,7 +33,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class ChatActivity extends AppCompatActivity {
-    ActivityChatBinding activityChatBinding;
+    private ActivityChatBinding activityChatBinding;
     private User receiverUser;
 
     private ChatAdapter chatAdapter;
@@ -42,6 +42,9 @@ public class ChatActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference databaseReference;
     private List<ChatMessage> chatMessages;
+    private String expectedSenderId;
+    private String expectedReceiverId;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,12 +63,16 @@ public class ChatActivity extends AppCompatActivity {
                 DataSnapshot childSnapshot = snapshot;
                 String senderId = childSnapshot.child(Constants.KEY_SENDER_ID).getValue().toString();
                 String receiverId = childSnapshot.child(Constants.KEY_RECEIVER_ID).getValue().toString();
-                String message = childSnapshot.child(Constants.KEY_MESSAGE).getValue().toString();
-                Date dateObject = childSnapshot.child(Constants.KEY_TIMESTAMP).getValue(Date.class);
-                String dateTime = getReadableDateTime(dateObject);
-                ChatMessage chatMessage = new ChatMessage(senderId, receiverId, message, dateTime);
-                chatMessages.add(chatMessage);
-                chatAdapter.notifyDataSetChanged();
+
+                if((senderId.equals(expectedSenderId) && receiverId.equals(expectedReceiverId))
+                    || senderId.equals(expectedReceiverId) && receiverId.equals(expectedSenderId)) {
+                    String message = childSnapshot.child(Constants.KEY_MESSAGE).getValue().toString();
+                    Date dateObject = childSnapshot.child(Constants.KEY_TIMESTAMP).getValue(Date.class);
+                    String dateTime = getReadableDateTime(dateObject);
+                    ChatMessage chatMessage = new ChatMessage(senderId, receiverId, message, dateTime);
+                    chatMessages.add(chatMessage);
+                    chatAdapter.notifyDataSetChanged();
+                }
 
             }
 
@@ -102,6 +109,8 @@ public class ChatActivity extends AppCompatActivity {
                 mAuth.getCurrentUser().getUid().toString()
         );
         activityChatBinding.chatRecyclerview.setAdapter(chatAdapter);
+        expectedSenderId = mAuth.getCurrentUser().getUid().toString();
+        expectedReceiverId = receiverUser.getId();
     }
 
     private void sendMessage() {
