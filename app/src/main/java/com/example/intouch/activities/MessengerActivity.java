@@ -81,18 +81,6 @@ public class MessengerActivity extends AppCompatActivity {
     }
 
 
-//    private void setInitialData(){
-//        for(int i = 0; i < 5; i++) {
-//            chats.add(new User ("id", "email", "pass", "name"));
-//            chats.add(new User ("id", "email", "pass", "name"));
-//            chats.add(new User ("id", "email", "pass", "name"));
-//            chats.add(new User ("id", "email", "pass", "name"));
-//            chats.add(new User ("id", "email", "pass", "name"));
-//        }
-//
-//
-//    }*/
-
     public void onClickNewChat(View view) {
         startActivity(new Intent(this, ChatCreateActivity.class));
     }
