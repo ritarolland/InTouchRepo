@@ -17,25 +17,24 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
-            app:shapeAppearanceOverlay="@style/circular"
-
-
-            android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
+
+
             app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/ellipseblue" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/montserrat"
             android:text="InTouch"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.036"
+            app:layout_constraintHorizontal_bias="0.04"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,15 +62,15 @@
             android:id="@+id/imageButton"
             android:layout_width="330dp"
             android:layout_height="159dp"
-            app:shapeAppearanceOverlay="@style/circular"
-
             android:layout_marginTop="20dp"
+
             android:background="#000000"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.396"
+            app:layout_constraintHorizontal_bias="0.523"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/SearchEditText"
+            app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/_614716489_120_p_fon_dlya_afishi_diskoteki_127"
             app:strokeColor="#FFFFFF"
             app:strokeWidth="3dp"
@@ -214,8 +213,8 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageButton4"
-            android:layout_width="159dp"
-            android:layout_height="197dp"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
             android:layout_marginStart="25dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="243dp"
@@ -243,7 +242,6 @@
             android:text="Шумные тусовки"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            app:layout_anchor="@+id/textView11"
             app:layout_anchorGravity="top|center"
             app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
             app:layout_constraintEnd_toEndOf="@+id/imageButton4"
@@ -251,15 +249,15 @@
             app:layout_constraintStart_toStartOf="@+id/imageButton4" />
 
         <TextView
-            android:layout_width="166dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="138dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="32dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Оторвись по полной"
             android:textColor="#BFB8B8"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/textView11"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toStartOf="@+id/textView11"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -299,8 +297,8 @@
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="152dp"
-            android:layout_height="41dp"
+            android:layout_width="137dp"
+            android:layout_height="51dp"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Посети музеи, выставки и театры"
@@ -311,16 +309,66 @@
             app:layout_constraintStart_toStartOf="@+id/inflate"
             app:layout_constraintTop_toBottomOf="@+id/inflate" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="105dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="69dp"
-            android:text="Button"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView"
+            android:layout_width="313dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="64dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ignacio_brosa_vjdbpuxus_s_unsplash"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintHorizontal_bias="0.437"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+            app:shapeAppearanceOverlay="@style/circular"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="3dp" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/montserrat_extrabold"
+            android:text="Другое"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.068"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="На любой вкус"
+            android:textColor="#BFB8B8"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView15"
+            app:layout_constraintHorizontal_bias="0.368"
+            app:layout_constraintStart_toStartOf="@+id/textView15"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="#000000"
+            android:fontFamily="@font/montserrat_extrabold"
+            android:text="Найди еще больше событий по душе"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.025"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
