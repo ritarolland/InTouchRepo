@@ -9,7 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.intouch.adapters.MessengerAdapter;
+import com.example.intouch.adapters.RecentConversationsAdapter;
 import com.example.intouch.databinding.ActivityMessengerBinding;
+import com.example.intouch.models.ChatMessage;
 import com.example.intouch.models.User;
 import com.example.intouch.utils.Constants;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,24 +22,36 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MessengerActivity extends AppCompatActivity {
-    ActivityMessengerBinding activityMessengerBinding;
 
-    FirebaseDatabase inTouchDataBase = FirebaseDatabase.getInstance();
-    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    ActivityMessengerBinding activityMessengerBinding;
+    private List<ChatMessage> conversations;
+    private RecentConversationsAdapter conversationsAdapter;
+
+    FirebaseDatabase inTouchDataBase;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityMessengerBinding = ActivityMessengerBinding.inflate(getLayoutInflater());
-        View view = activityMessengerBinding.getRoot();
-        setContentView(view);
-        setInitialData();
+        setContentView(activityMessengerBinding.getRoot());
+        init();
+        //setInitialData();
 
     }
 
-    private void setInitialData() {
+    private void init() {
+        conversations = new ArrayList<>();
+        conversationsAdapter = new RecentConversationsAdapter(conversations);
+        activityMessengerBinding.conversationsRecyclerview.setAdapter(conversationsAdapter);
+        inTouchDataBase = FirebaseDatabase.getInstance();
+        mAuth = FirebaseAuth.getInstance();
+    }
+
+    /*private void setInitialData() {
 
         inTouchDataBase.getReference(Constants.KEY_COLLECTION_USERS).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
 
@@ -78,7 +92,7 @@ public class MessengerActivity extends AppCompatActivity {
             }
         });
 
-    }
+    }*/
 
 
     public void onClickNewChat(View view) {

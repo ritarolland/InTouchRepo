@@ -3,34 +3,29 @@ package com.example.intouch.activities;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
-import android.widget.Toast;
-
 import com.example.intouch.adapters.ChatAdapter;
-import com.example.intouch.adapters.ChatCreateAdapter;
-import com.example.intouch.adapters.MessengerAdapter;
 import com.example.intouch.databinding.ActivityChatBinding;
-import com.example.intouch.databinding.ActivityChatCreateBinding;
 import com.example.intouch.models.ChatMessage;
 import com.example.intouch.models.User;
 import com.example.intouch.utils.Constants;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.EventListener;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Objects;
 
 public class ChatActivity extends AppCompatActivity {
     private ActivityChatBinding activityChatBinding;
@@ -44,6 +39,8 @@ public class ChatActivity extends AppCompatActivity {
     private List<ChatMessage> chatMessages;
     private String expectedSenderId;
     private String expectedReceiverId;
+
+    private String conversionId = null;
 
 
     @Override
@@ -70,8 +67,13 @@ public class ChatActivity extends AppCompatActivity {
                     Date dateObject = childSnapshot.child(Constants.KEY_TIMESTAMP).getValue(Date.class);
                     String dateTime = getReadableDateTime(dateObject);
                     ChatMessage chatMessage = new ChatMessage(senderId, receiverId, message, dateTime);
+                    chatMessage.setDateObject(dateObject);
                     chatMessages.add(chatMessage);
                     chatAdapter.notifyDataSetChanged();
+                    activityChatBinding.chatRecyclerview.smoothScrollToPosition(chatMessages.size() - 1);
+                }
+                if(conversionId == null) {
+                    checkForConversation();
                 }
 
             }
@@ -114,12 +116,32 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     private void sendMessage() {
+        if(activityChatBinding.edChatInput.getText().toString().isEmpty()) return;
         HashMap<String, Object> message = new HashMap<>();
         message.put(Constants.KEY_SENDER_ID, mAuth.getCurrentUser().getUid().toString());
         message.put(Constants.KEY_RECEIVER_ID, receiverUser.getId());
         message.put(Constants.KEY_MESSAGE, activityChatBinding.edChatInput.getText().toString());
         message.put(Constants.KEY_TIMESTAMP, new Date());
         inTouchDatabase.getReference(Constants.KEY_COLLECTION_CHAT).push().setValue(message);
+
+        if(conversionId != null) {
+            updateConversion(activityChatBinding.edChatInput.getText().toString());
+        } else {
+            HashMap<String, Object> conversion = new HashMap<>();
+            conversion.put(Constants.KEY_SENDER_ID, mAuth.getCurrentUser().getUid().toString());
+            conversion.put(Constants.KEY_RECEIVER_ID, receiverUser.getId());
+            conversion.put(
+                    Constants.KEY_SENDER_NAME,
+                    inTouchDatabase.getReference(Constants.KEY_COLLECTION_USERS)
+                            .child(mAuth.getCurrentUser().getUid().toString())
+                    .child(Constants.KEY_USER_NAME).get().toString()
+            );
+            conversion.put(Constants.KEY_RECEIVER_NAME, receiverUser.getUserName());
+            conversion.put(Constants.KEY_LAST_MESSAGE, activityChatBinding.edChatInput.getText().toString());
+            conversion.put(Constants.KEY_TIMESTAMP, new Date());
+            addConversion(conversion);
+
+        }
         activityChatBinding.edChatInput.setText(null);
     }
 
@@ -137,4 +159,57 @@ public class ChatActivity extends AppCompatActivity {
     private String getReadableDateTime(Date date) {
         return new SimpleDateFormat("hh:mm a dd MMMM", Locale.getDefault()).format(date);
     }
+
+    private void addConversion(HashMap<String, Object> conversion) {
+        String newKey = inTouchDatabase.getReference(Constants.KEY_COLLECTION_CONVERSATIONS)
+                .push().getKey();
+        inTouchDatabase.getReference(Constants.KEY_COLLECTION_CONVERSATIONS).child(newKey).setValue(conversion)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        conversionId = newKey;
+                    }
+                });
+
+    }
+    private void updateConversion(String message) {
+        DatabaseReference databaseReference =
+                inTouchDatabase.getReference(Constants.KEY_COLLECTION_CONVERSATIONS).child(conversionId);
+        Map<String, Object> updates = new HashMap<>();
+        updates.put(Constants.KEY_LAST_MESSAGE, message);
+        updates.put(Constants.KEY_TIMESTAMP, new Date());
+        databaseReference.updateChildren(updates);
+    }
+
+    private void checkForConversation() {
+        if(chatMessages.size() > 0) {
+            checkForConversationRemotely(mAuth.getCurrentUser().getUid().toString(), receiverUser.getId());
+            //checkForConversationRemotely(receiverUser.getId(), mAuth.getCurrentUser().getUid().toString());
+        }
+    }
+
+    private void checkForConversationRemotely(String senderId, String receiverId) {
+        inTouchDatabase.getReference(Constants.KEY_COLLECTION_CONVERSATIONS).get().
+                addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if(task.isSuccessful() && task.getResult() != null && task.getResult().getChildrenCount() > 0) {
+                            for(DataSnapshot childSnapshot : task.getResult().getChildren()) {
+                                String currentSenderId = childSnapshot.child(Constants.KEY_SENDER_ID).getValue(String.class);
+                                String currentReceiverId = childSnapshot.child(Constants.KEY_RECEIVER_ID).getValue(String.class);
+
+                                if(Objects.equals(currentReceiverId, receiverId) && Objects.equals(currentSenderId, senderId) ||
+                                        Objects.equals(currentSenderId, receiverId) && Objects.equals(currentReceiverId, senderId)) {
+                                    conversionId = childSnapshot.getKey().toString();
+                                }
+                            }
+
+                            DataSnapshot dataSnapshot = task.getResult().getChildren().iterator().next();
+                            conversionId = dataSnapshot.getKey().toString();
+                        }
+                    }
+                });
+
+    }
+
 }

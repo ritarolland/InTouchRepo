@@ -4,7 +4,24 @@ import java.util.Date;
 
 public class ChatMessage {
     private String senderId, receiverId, dateTime, message;
-    //private Date dateObject;
+    private Date dateObject;
+    private String conversionId, conversionName;
+
+    public String getConversionId() {
+        return conversionId;
+    }
+
+    public String getConversionName() {
+        return conversionName;
+    }
+
+    public Date getDateObject() {
+        return dateObject;
+    }
+
+    public void setDateObject(Date dateObject) {
+        this.dateObject = dateObject;
+    }
 
     public ChatMessage(){}
 
