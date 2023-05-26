@@ -1,14 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#FFFFFF">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="256dp"
+            android:layout_height="244dp"
+            android:layout_marginEnd="108dp"
+            android:src="@drawable/monitoring"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.025" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="196dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="172dp"
+            android:background="@drawable/white_button"
+            android:elevation="20dp"
+            android:fontFamily="@font/inter_black"
+            android:gravity="center"
+            android:text="Создавай события"
+
+            android:textColor="#000000"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageView8"
+            app:layout_constraintTop_toTopOf="@+id/imageView8"
+            app:layout_constraintVertical_bias="0.042" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="196dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/blackbutton"
+            android:elevation="20dp"
+            android:fontFamily="@font/inter_black"
+            android:gravity="center"
+            android:text="Собирай компании"
+            android:textColor="@color/white"
+
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Мероприятие"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.114"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="340dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#60106E"
+            android:ems="10"
+            android:hint="Название"
+            android:inputType="text"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.301"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="341dp"
+            android:layout_height="76dp"
+            android:layout_margin="16dp"
+            android:hint="Категория"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText">
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_text"
+                android:layout_width="327dp"
+                android:layout_height="53dp"
+                android:inputType="none">
+
+            </AutoCompleteTextView>
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CalendarView
+            android:id="@+id/calendarView2"
+            android:layout_width="322dp"
+            android:layout_height="242dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/blackrectanglelines"
+
+            android:theme="@style/Theme.Custom"
+            app:layout_constraintEnd_toEndOf="@+id/textView22"
+            app:layout_constraintStart_toStartOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Когда планируется встреча?"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

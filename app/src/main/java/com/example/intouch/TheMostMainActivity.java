@@ -85,6 +85,7 @@ public class TheMostMainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (selectedTab != 2){
+
                     getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, NotificationFragment.class, null).commit();
 
                     HomeText.setVisibility(View.GONE);
@@ -117,6 +118,7 @@ public class TheMostMainActivity extends AppCompatActivity {
                     NotificationLayout.startAnimation(scaleAnimation);
 
                     selectedTab = 2;
+
                 }
 
             }
@@ -158,6 +160,7 @@ public class TheMostMainActivity extends AppCompatActivity {
                     AddLayout.startAnimation(scaleAnimation);
 
                     selectedTab = 3;
+
                 }
 
             }
@@ -198,6 +201,7 @@ public class TheMostMainActivity extends AppCompatActivity {
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
                     AddLayout.startAnimation(scaleAnimation);
+
 
                     selectedTab = 4;
                 }

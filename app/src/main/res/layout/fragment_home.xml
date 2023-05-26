@@ -42,7 +42,7 @@
             android:id="@+id/SearchEditText"
             android:layout_width="306dp"
             android:layout_height="41dp"
-            android:layout_marginTop="88dp"
+            android:layout_marginTop="76dp"
 
             android:background="@drawable/drawarectangle"
             android:elevation="20dp"
@@ -365,10 +365,10 @@
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.025"
+            app:layout_constraintHorizontal_bias="0.088"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButton4"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.09" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
