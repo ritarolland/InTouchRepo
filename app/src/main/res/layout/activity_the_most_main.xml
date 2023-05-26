@@ -20,14 +20,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#FFFFFF"
+        android:background="#000000"
         android:elevation="10dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingStart="20dp"
-        android:paddingTop="15dp"
+        android:paddingTop="8dp"
         android:paddingEnd="20dp"
-        android:paddingBottom="15dp"
+        android:paddingBottom="8dp"
         android:weightSum="5">
 
         <LinearLayout
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:background="@drawable/home_round"
+            android:background="@drawable/icons_round"
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingStart="5dp"
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Меню"
-                android:textColor="#500472"
+                android:textColor="#AA25C1"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Уведомления"
-                android:textColor="#2E4553"
+                android:textColor="#AA25C1"
                 android:textSize="16dp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Добавить"
-                android:textColor="#271007"
+                android:textColor="#AA25C1"
                 android:textSize="16dp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -149,7 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Чаты"
-                android:textColor="#153636"
+                android:textColor="#AA25C1"
                 android:textSize="16dp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -181,7 +181,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Профиль"
-                android:textColor="#902B04"
+                android:textColor="#AA25C1"
                 android:textSize="16dp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -190,7 +190,5 @@
 
 
     </LinearLayout>
-
-
 
 </RelativeLayout>

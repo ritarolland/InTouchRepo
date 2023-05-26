@@ -67,7 +67,7 @@ public class TheMostMainActivity extends AppCompatActivity {
 
                     HomeText.setVisibility(View.VISIBLE);
                     HomeImage.setImageResource(R.drawable.homeicon_selected);
-                    HomeLayout.setBackgroundResource(R.drawable.home_round);
+                    HomeLayout.setBackgroundResource(R.drawable.icons_round);
 
 
 
@@ -109,7 +109,7 @@ public class TheMostMainActivity extends AppCompatActivity {
 
                     NotificationText.setVisibility(View.VISIBLE);
                     NotificationImage.setImageResource(R.drawable.notificationicon_selected);
-                    NotificationLayout.setBackgroundResource(R.drawable.notification_round);
+                    NotificationLayout.setBackgroundResource(R.drawable.icons_round);
 
                     ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
@@ -150,7 +150,7 @@ public class TheMostMainActivity extends AppCompatActivity {
 
                     AddText.setVisibility(View.VISIBLE);
                     AddImage.setImageResource(R.drawable.add_selected);
-                    AddLayout.setBackgroundResource(R.drawable.add_round);
+                    AddLayout.setBackgroundResource(R.drawable.icons_round);
 
                     ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
@@ -192,7 +192,7 @@ public class TheMostMainActivity extends AppCompatActivity {
 
                     ChatText.setVisibility(View.VISIBLE);
                     ChatImage.setImageResource(R.drawable.messages_question_selected);
-                    ChatLayout.setBackgroundResource(R.drawable.chat_round);
+                    ChatLayout.setBackgroundResource(R.drawable.icons_round);
 
                     ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
@@ -234,7 +234,7 @@ public class TheMostMainActivity extends AppCompatActivity {
 
                     ProfileText.setVisibility(View.VISIBLE);
                     ProfileImage.setImageResource(R.drawable.user_selected);
-                    ProfileLayout.setBackgroundResource(R.drawable.profile_round);
+                    ProfileLayout.setBackgroundResource(R.drawable.icons_round);
 
                     ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
