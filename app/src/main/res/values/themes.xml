@@ -31,4 +31,9 @@
         <item name="android:focusedMonthDateColor">#000000</item>
         <item name="android:weekNumberColor">#FFFFFF</item>
     </style>
+    
+    <style name="DialogTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorAccent">@color/black</item>
+
+    </style>
 </resources>

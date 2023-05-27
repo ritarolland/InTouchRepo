@@ -73,7 +73,7 @@
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/_614716489_120_p_fon_dlya_afishi_diskoteki_127"
             app:strokeColor="#FFFFFF"
-            app:strokeWidth="3dp"
+            app:strokeWidth="2dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
