@@ -18,10 +18,24 @@ public class User implements Serializable {
     private int avatar = R.drawable.logo;
     private boolean sex = true;
 
+    public User(){};
+
     public User(String id, String userEmail, String userPassword, String userName) {
         this.userEmail = userEmail;
         this.userPassword = userPassword;
         this.userName = userName;
+        this.id = id;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
+
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -61,42 +75,5 @@ public class User implements Serializable {
         this.userName = userName;
     }
 
-    /*@Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(@NonNull Parcel dest, int flags) {
-        dest.writeString(userEmail);
-        dest.writeString(userName);
-        dest.writeString(userPassword);
-        dest.writeString(id);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            dest.writeBoolean(sex);
-        }
-        dest.writeInt(avatar);
-    }
-
-    public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>() {
-        public User createFromParcel(Parcel in) {
-            return new User(in);
-        }
-
-        public User[] newArray(int size) {
-            return new User[size];
-        }
-    };
-
-    private User(Parcel in) {
-        avatar = in.readInt();
-        userEmail = in.readString();
-        userName = in.readString();
-        userPassword = in.readString();
-        id = in.readString();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            sex = in.readBoolean();
-        }
-    }*/
 }
 

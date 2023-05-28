@@ -7,6 +7,14 @@ public class ChatMessage {
     private Date dateObject;
     private String conversionId, conversionName;
 
+    public void setConversionId(String conversionId) {
+        this.conversionId = conversionId;
+    }
+
+    public void setConversionName(String conversionName) {
+        this.conversionName = conversionName;
+    }
+
     public String getConversionId() {
         return conversionId;
     }
