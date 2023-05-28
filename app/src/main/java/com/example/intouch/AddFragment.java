@@ -25,47 +25,14 @@ import com.example.intouch.databinding.FragmentAdd2Binding;
 
 
 public class AddFragment extends Fragment {
-    FragmentAdd2Binding binding;
-    AppCompatButton WomanButton, ManButton, AllButton;
+
 
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        binding = FragmentAdd2Binding.inflate(inflater, container, false);
-        View view = binding.getRoot();
 
-
-        WomanButton = (AppCompatButton) binding.WomanButton;
-        ManButton = (AppCompatButton) binding.ManButton;
-        AllButton =(AppCompatButton) binding.AllButton;
-
-
-
-        View.OnClickListener onClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                switch (getView().getId()){
-                    case R.id.WomanButton:
-                        WomanButton.setBackgroundColor(0);
-                        break;
-                    case R.id.ManButton:
-                        ManButton.setBackgroundColor(Color.RED);
-                        break;
-                    case R.id.AllButton:
-                        AllButton.setBackgroundColor(Color.CYAN);
-                        break;
-
-                }
-
-            }
-        };
-
-        WomanButton.setOnClickListener(onClickListener);
-        ManButton.setOnClickListener(onClickListener);
-        AllButton.setOnClickListener(onClickListener);
 
 
         return inflater.inflate(R.layout.fragment_add2, container, false);

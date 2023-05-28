@@ -2,21 +2,30 @@ package com.example.intouch;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.window.SplashScreen;
+
 
 public class TheMostMainActivity extends AppCompatActivity {
+
+
+
     private int selectedTab = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_the_most_main);
+
+
 
 
         final LinearLayout HomeLayout = findViewById(R.id.HomeLayout);
@@ -128,7 +137,7 @@ public class TheMostMainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (selectedTab != 3){
-                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, AddFragment.class, null).commit();
+//                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, AddFragment.class, null).commit();
 
                     HomeText.setVisibility(View.GONE);
                     NotificationText.setVisibility(View.GONE);
@@ -160,6 +169,10 @@ public class TheMostMainActivity extends AppCompatActivity {
                     AddLayout.startAnimation(scaleAnimation);
 
                     selectedTab = 3;
+
+                    Intent intent = new Intent(TheMostMainActivity.this, WelcomeAddScreen.class);
+                    startActivity(intent);
+
 
                 }
 
@@ -250,6 +263,7 @@ public class TheMostMainActivity extends AppCompatActivity {
 
             }
         });
-    }
+
+            }
 
 }
