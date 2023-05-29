@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<resources>
+
+    <style name="tooltip" parent="Widget.MaterialComponents.Tooltip">
+        <item name="background">@color/black</item>
+        <item name="android:visibility">visible</item>
+
+
+    </style>
+    <style name="tooltips" parent="Widget.MaterialComponents.Tooltip">
+        <item name="background">@color/black</item>
+        <item name="shapeAppearanceOverlay">@style/tooltipShOverylay</item>
+        <item name="android:visibility">visible</item>
+
+
+    </style>
+
+    <style name="tooltipShOverylay">
+        <item name="shapeAppearanceOverlay">@style/tooltipShOverylay</item>
+
+        <item name="cornerSize">50%</item>
+
+    </style>
+
+
+
+
+
+
+</resources>

@@ -18,6 +18,8 @@ import android.widget.Toast;
 import com.example.intouch.databinding.ActivityAddEventBinding;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
+import com.google.android.material.slider.RangeSlider;
+import com.google.android.material.slider.Slider;
 
 import java.util.Calendar;
 import java.util.Locale;
@@ -28,6 +30,8 @@ public class AddEventActivity extends AppCompatActivity {
     AppCompatButton manButton;
     AppCompatButton allButton;
     AppCompatButton SelectDate;
+
+    private RangeSlider stepSlider;
 
     private int jam, menit;
 
@@ -56,6 +60,10 @@ public class AddEventActivity extends AppCompatActivity {
         binding = ActivityAddEventBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
+        stepSlider = findViewById(R.id.RangeSlider);
+
+//        rangeSlider.setLabelFormatter();
 
 
 
