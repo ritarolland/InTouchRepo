@@ -22,7 +22,7 @@ public class WelcomeAddScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(WelcomeAddScreen.this, AddEventActivity.class);
+                Intent intent = new Intent(WelcomeAddScreen.this, TheMostMainActivity.class);
                 startActivity(intent);
 
                 finish();

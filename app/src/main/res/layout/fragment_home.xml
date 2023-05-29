@@ -40,8 +40,8 @@
 
         <EditText
             android:id="@+id/SearchEditText"
-            android:layout_width="306dp"
-            android:layout_height="41dp"
+            android:layout_width="323dp"
+            android:layout_height="38dp"
             android:layout_marginTop="76dp"
 
             android:background="@drawable/drawarectangle"
@@ -61,19 +61,18 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageButton"
             android:layout_width="330dp"
-            android:layout_height="159dp"
+            android:layout_height="162dp"
             android:layout_marginTop="20dp"
-
             android:background="#000000"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintHorizontal_bias="0.366"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/SearchEditText"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/_614716489_120_p_fon_dlya_afishi_diskoteki_127"
             app:strokeColor="#FFFFFF"
-            app:strokeWidth="2dp"
+            app:strokeWidth="6dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -92,8 +91,8 @@
             app:layout_constraintVertical_bias="0.406" />
 
         <TextView
-            android:layout_width="225dp"
-            android:layout_height="35dp"
+            android:layout_width="222dp"
+            android:layout_height="39dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Все актуальные события"
             android:textColor="#BFB8B8"
@@ -224,7 +223,7 @@
 
             app:layout_anchorGravity="top|center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.08"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButton2"
             app:shapeAppearanceOverlay="@style/circular"
@@ -270,7 +269,7 @@
             android:scaleType="centerCrop"
             app:layout_anchorGravity="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.441"
+            app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toEndOf="@+id/imageButton4"
             app:layout_constraintTop_toBottomOf="@+id/imageButton3"
             app:shapeAppearanceOverlay="@style/circular"

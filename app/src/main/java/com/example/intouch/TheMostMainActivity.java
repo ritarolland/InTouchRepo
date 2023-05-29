@@ -62,10 +62,10 @@ public class TheMostMainActivity extends AppCompatActivity {
                     ProfileText.setVisibility(View.GONE);
 
 
-                    NotificationImage.setImageResource(R.drawable.notificationicon);
-                    AddImage.setImageResource(R.drawable.add);
-                    ChatImage.setImageResource(R.drawable.messages_question);
-                    ProfileImage.setImageResource(R.drawable.user);
+                    NotificationImage.setImageResource(R.drawable.notificationicon_selected); //here
+                    AddImage.setImageResource(R.drawable.add_selected);
+                    ChatImage.setImageResource(R.drawable.messages_question_selected);
+                    ProfileImage.setImageResource(R.drawable.user_selected);
 
 
                     NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -103,10 +103,10 @@ public class TheMostMainActivity extends AppCompatActivity {
                     ProfileText.setVisibility(View.GONE);
 
 
-                    HomeImage.setImageResource(R.drawable.homeicon);
-                    AddImage.setImageResource(R.drawable.add);
-                    ChatImage.setImageResource(R.drawable.messages_question);
-                    ProfileImage.setImageResource(R.drawable.user);
+                    HomeImage.setImageResource(R.drawable.homeicon_selected);
+                    AddImage.setImageResource(R.drawable.add_selected);
+                    ChatImage.setImageResource(R.drawable.messages_question_selected);
+                    ProfileImage.setImageResource(R.drawable.user_selected);
 
 
 
@@ -145,10 +145,10 @@ public class TheMostMainActivity extends AppCompatActivity {
                     ProfileText.setVisibility(View.GONE);
 
 
-                    HomeImage.setImageResource(R.drawable.homeicon);
-                    NotificationImage.setImageResource(R.drawable.notificationicon);
-                    ChatImage.setImageResource(R.drawable.messages_question);
-                    ProfileImage.setImageResource(R.drawable.user );
+                    HomeImage.setImageResource(R.drawable.homeicon_selected);
+                    NotificationImage.setImageResource(R.drawable.notificationicon_selected);
+                    ChatImage.setImageResource(R.drawable.messages_question_selected);
+                    ProfileImage.setImageResource(R.drawable.user_selected);
 
 
 
@@ -170,7 +170,7 @@ public class TheMostMainActivity extends AppCompatActivity {
 
                     selectedTab = 3;
 
-                    Intent intent = new Intent(TheMostMainActivity.this, WelcomeAddScreen.class);
+                    Intent intent = new Intent(TheMostMainActivity.this, AddEventActivity.class);
                     startActivity(intent);
 
 
@@ -192,10 +192,10 @@ public class TheMostMainActivity extends AppCompatActivity {
                     ProfileText.setVisibility(View.GONE);
 
 
-                    HomeImage.setImageResource(R.drawable.homeicon);
-                    NotificationImage.setImageResource(R.drawable.notificationicon);
-                    AddImage.setImageResource(R.drawable.add);
-                    ProfileImage.setImageResource(R.drawable.user);
+                    HomeImage.setImageResource(R.drawable.homeicon_selected);
+                    NotificationImage.setImageResource(R.drawable.notificationicon_selected);
+                    AddImage.setImageResource(R.drawable.add_selected);
+                    ProfileImage.setImageResource(R.drawable.user_selected);
 
 
 
@@ -235,10 +235,10 @@ public class TheMostMainActivity extends AppCompatActivity {
                     ChatText.setVisibility(View.GONE);
 
 
-                    HomeImage.setImageResource(R.drawable.homeicon);
-                    NotificationImage.setImageResource(R.drawable.notificationicon);
-                    AddImage.setImageResource(R.drawable.add);
-                    ChatImage.setImageResource(R.drawable.messages_question);
+                    HomeImage.setImageResource(R.drawable.homeicon_selected);
+                    NotificationImage.setImageResource(R.drawable.notificationicon_selected);
+                    AddImage.setImageResource(R.drawable.add_selected);
+                    ChatImage.setImageResource(R.drawable.messages_question_selected);
 
 
 

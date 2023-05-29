@@ -14,4 +14,16 @@
     <color name="rectangle_gray">#474747</color>
     <color name="pale">#515151</color>
     <color name="______color">#000000</color>
+
+    <color name="colorPrimary">#4F2A81</color>
+
+    <color name="colorPrimaryDark">#303F9F</color>
+
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="disable_forground_grey">#42221F1F</color>
+
+    <color name="disable_thumb_grey">#1C000000</color>
+
+    <color name="disable_thumb_green">#38B43D</color>
 </resources>

@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Меню"
-                android:textColor="#AA25C1"
+                android:textColor="#00C5FF"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Уведомления"
-                android:textColor="#AA25C1"
+                android:textColor="#00C5FF"
                 android:textSize="16dp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Добавить"
-                android:textColor="#AA25C1"
+                android:textColor="#00C5FF"
                 android:textSize="16dp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -149,7 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Чаты"
-                android:textColor="#AA25C1"
+                android:textColor="#00C5FF"
                 android:textSize="16dp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -181,7 +181,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Профиль"
-                android:textColor="#AA25C1"
+                android:textColor="#00C5FF"
                 android:textSize="16dp"
                 android:textStyle="bold"
                 android:visibility="gone" />

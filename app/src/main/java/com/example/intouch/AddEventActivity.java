@@ -2,15 +2,18 @@ package com.example.intouch;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.SwitchCompat;
 
 import android.app.TimePickerDialog;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -30,6 +33,11 @@ public class AddEventActivity extends AppCompatActivity {
     AppCompatButton manButton;
     AppCompatButton allButton;
     AppCompatButton SelectDate;
+
+    int counter = 1;
+    EditText editTextNumber2;
+
+    SwitchCompat Switch;
 
     private RangeSlider stepSlider;
 
@@ -62,8 +70,8 @@ public class AddEventActivity extends AppCompatActivity {
         setContentView(view);
 
         stepSlider = findViewById(R.id.RangeSlider);
-
-//        rangeSlider.setLabelFormatter();
+        Switch = (SwitchCompat) findViewById(R.id.Switch);
+        editTextNumber2 = (EditText) findViewById(R.id.editTextNumber2);
 
 
 
@@ -71,6 +79,7 @@ public class AddEventActivity extends AppCompatActivity {
         adapterItems = new ArrayAdapter<String>(this, R.layout.list_item, item);
 
         autoCompleteTextView.setAdapter(adapterItems);
+        ClickSwitch(view);
 
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -135,33 +144,6 @@ public class AddEventActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         womanButton = (AppCompatButton) findViewById(R.id.WomanButton);
         manButton = (AppCompatButton) findViewById(R.id.ManButton);
         allButton = (AppCompatButton) findViewById(R.id.AllButton);
@@ -185,6 +167,28 @@ public class AddEventActivity extends AppCompatActivity {
         manButton.setBackgroundResource(R.drawable.white_with_orange);
         allButton.setBackgroundResource(R.drawable.all_background);
 
+    }
+
+    public void ClickSwitch(View view){
+
+        Switch.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (counter % 2 == 1) {
+                    counter += 1;
+                    editTextNumber2.setText("Любое");
+                    editTextNumber2.setInputType(0);
+                }
+                else {
+                    counter += 1;
+                    editTextNumber2.setInputType(InputType.TYPE_CLASS_NUMBER);
+                    editTextNumber2.setText("");
+                    editTextNumber2.setHint("Введите число");
+                }
+            }
+
+        });
     }
 
 

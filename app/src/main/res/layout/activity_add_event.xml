@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#000000"
     tools:context=".AddEventActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,19 +16,19 @@
             android:id="@+id/imageView8"
             android:layout_width="256dp"
             android:layout_height="244dp"
-            android:layout_marginEnd="108dp"
+            android:layout_marginEnd="120dp"
             android:onClick="ClickMan"
             android:src="@drawable/monitoring"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.062" />
+            app:layout_constraintVertical_bias="0.021" />
 
         <TextView
             android:id="@+id/textView18"
             android:layout_width="196dp"
             android:layout_height="94dp"
-            android:layout_marginStart="156dp"
+            android:layout_marginStart="160dp"
             android:background="@drawable/white_button"
             android:elevation="20dp"
             android:fontFamily="@font/inter_black"
@@ -39,13 +40,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/imageView8"
             app:layout_constraintTop_toTopOf="@+id/imageView8"
-            app:layout_constraintVertical_bias="0.043" />
+            app:layout_constraintVertical_bias="0.026" />
 
         <TextView
             android:id="@+id/textView19"
             android:layout_width="196dp"
             android:layout_height="94dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/blackbutton"
             android:elevation="20dp"
             android:fontFamily="@font/inter_black"
@@ -63,7 +64,7 @@
             android:id="@+id/textView21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="36dp"
             android:fontFamily="@font/inter_bold"
             android:text="Мероприятие"
             android:textColor="#000000"
@@ -116,13 +117,13 @@
             android:id="@+id/textView22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="48dp"
             android:fontFamily="@font/inter_bold"
             android:text="Когда планируется встреча?"
             android:textColor="#000000"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.627"
+            app:layout_constraintHorizontal_bias="0.302"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
@@ -144,15 +145,12 @@
             android:id="@+id/WomanNotButton"
             android:layout_width="199dp"
             android:layout_height="195dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="178dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="136dp"
             android:background="@drawable/white_button"
             android:scaleType="centerCrop"
             android:src="@drawable/travel"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -160,11 +158,11 @@
             android:layout_width="170dp"
             android:layout_height="73dp"
             android:layout_marginTop="36dp"
-            android:onClick="ClickWoman"
             android:background="@drawable/white_with_blacklines"
             android:elevation="20dp"
             android:fontFamily="@font/inter_semibold"
             android:gravity="center"
+            android:onClick="ClickWoman"
             android:text="Только женщины"
             android:textColor="#000000"
             android:textSize="14dp"
@@ -195,8 +193,8 @@
             android:background="@drawable/white_with_orange"
             android:elevation="20dp"
             android:fontFamily="@font/inter_semibold"
-            android:onClick="ClickMan"
             android:gravity="center"
+            android:onClick="ClickMan"
             android:text="Только мужчины"
             android:textColor="#000000"
             android:textSize="14dp"
@@ -277,9 +275,9 @@
             android:layout_marginTop="48dp"
             android:background="@drawable/white_button"
             android:elevation="10dp"
-            android:text="-"
             android:fontFamily="@font/inter_bold"
             android:gravity="center"
+            android:text="-"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -304,21 +302,183 @@
         <com.google.android.material.slider.RangeSlider
             android:id="@+id/RangeSlider"
             style="@style/tooltips"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_width="311dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
             android:stepSize="1.0"
-            android:valueFrom="0"
-            android:valueTo="100"
+            android:valueFrom="12"
+            android:valueTo="80"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/AllImage"
+            app:layout_constraintTop_toBottomOf="@+id/textView23"
             app:values="@array/rangeSlider" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Возраст участников"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.088"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AllImage" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/RangeSlider"
+            app:srcCompat="@drawable/children" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="28dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/RangeSlider"
+            app:srcCompat="@drawable/grandmother" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="213dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/drawarectangle"
+            android:ems="10"
+            android:hint="От"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Количество участников"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.156"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+        <EditText
+            android:id="@+id/editTextNumber2"
+            android:layout_width="213dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+
+
+            android:background="@drawable/drawarectangle"
+
+            android:ems="10"
+            android:hint="   До"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/Switch"
+            android:layout_width="342dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="24dp"
+            android:checked="false"
+            android:fontFamily="@font/inter_semibold"
+            android:foregroundGravity="center"
+            android:text="Неограниченное количество участников"
+            android:theme="@style/SCBSwitch"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/editTextText2"
+            android:layout_width="285dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/white_with_grey"
+            android:ems="10"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:hint="@string/EventDescription"
+            android:inputType="text"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.379"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Switch" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button2"
+            android:layout_width="329dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/blackbutton"
+            android:text="Создать событие"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.343"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+
+        <ImageButton
+            android:id="@+id/imageButton12"
+            android:layout_width="38dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="48dp"
+
+            android:layout_marginBottom="4dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintStart_toStartOf="@+id/imageButton13"
+            app:srcCompat="@drawable/people" />
+
+        <ImageButton
+            android:id="@+id/imageButton13"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="204dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/network" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
 </ScrollView>

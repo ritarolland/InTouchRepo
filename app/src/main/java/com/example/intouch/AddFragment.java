@@ -1,6 +1,8 @@
 package com.example.intouch;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -32,11 +34,18 @@ public class AddFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
-
+//        moveToNewActivity();
 
         return inflater.inflate(R.layout.fragment_add2, container, false);
     }
+
+//    private void moveToNewActivity () {
+//
+//        Intent i = new Intent(getActivity(), AddEventActivity.class);
+//        startActivity(i);
+//        ((Activity) getActivity()).overridePendingTransition(0, 0);
+//
+//    }
 
 }
 
