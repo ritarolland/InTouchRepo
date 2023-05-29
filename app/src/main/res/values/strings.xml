@@ -26,4 +26,9 @@
         <item>20</item>
         <item>70</item>
     </string-array>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="name_hint">Name</string>
+    <string name="enter_message">Enter message</string>
 </resources>

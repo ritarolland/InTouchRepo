@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "312720355396",
+    "firebase_url": "https://intouch-9ab28-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "intouch-9ab28",
+    "storage_bucket": "intouch-9ab28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312720355396:android:7aca49f7c4117e58200c11",
+        "android_client_info": {
+          "package_name": "com.example.intouch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "312720355396-i0rrfe3daqatvs6ort595emp5dp9oatu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfQSpGxsWfg0Lqh8ztOegWA7d8SeP8JcU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "312720355396-am2fg433inv0a42ggne434r24tme1hb6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
