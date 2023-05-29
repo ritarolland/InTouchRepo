@@ -17,6 +17,8 @@ public class WelcomeAddScreen extends AppCompatActivity {
 
 
 
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -26,7 +28,7 @@ public class WelcomeAddScreen extends AppCompatActivity {
                 finish();
             }
 
-        }, 2000);
+        }, 2500);
 
 
 
