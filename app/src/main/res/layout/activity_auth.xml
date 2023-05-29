@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".AuthActivity">
+    tools:context=".activities.AuthActivity">
 
     <RelativeLayout
         android:id="@+id/password_layout"
@@ -22,14 +22,12 @@
             android:id="@+id/password_rectangle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/drawarectangle"
+            android:background="@drawable/rectangle_shape_gray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            >
-
-        </View>
+            />
 
         <EditText
             android:id="@+id/password_edittext"
@@ -42,13 +40,12 @@
             android:hint="@string/password"
             android:textColorHint="@color/hint"
             android:textSize="14sp"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TouchTargetSizeCheck">
-
-        </EditText>
+            tools:ignore="TouchTargetSizeCheck"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -65,14 +62,14 @@
             android:id="@+id/email_rectangle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/drawarectangle"
+            android:background="@drawable/rectangle_shape_gray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            >
+            />
 
-        </View>
+
 
         <EditText
             android:id="@+id/email_edittext"
@@ -85,13 +82,12 @@
             android:hint="@string/email"
             android:textColorHint="@color/hint"
             android:textSize="14sp"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TouchTargetSizeCheck">
-
-        </EditText>
+            tools:ignore="TouchTargetSizeCheck"/>
     </RelativeLayout>
 
     <TextView
@@ -105,9 +101,7 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/email_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </TextView>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/enter"
@@ -118,6 +112,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/enter"
         android:textSize="14sp"
+        android:textColor="@color/black"
         android:onClick="onClickSignIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -128,8 +123,9 @@
         android:id="@+id/google"
         android:layout_width="280dp"
         android:layout_height="44dp"
-        android:onClick="OnClick2"
         android:layout_marginTop="39dp"
+
+        android:background="@drawable/blue_button"
         android:fontFamily="@font/montserrat"
         android:text="@string/enter_with_google"
         android:textSize="14sp"
@@ -194,9 +190,7 @@
         app:layout_constraintTop_toBottomOf="@+id/enter"
         android:textSize="14sp"
         android:text="@string/or"
-        android:textColor="@color/pale">
-
-    </TextView>
+        android:textColor="@color/pale"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         app:layout_constraintBottom_toTopOf="@+id/find_your_company"
