@@ -22,12 +22,14 @@
             android:id="@+id/password_rectangle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/rectangle_shape_gray"
+            android:background="@drawable/drawarectangle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            ></View>
+            >
+
+        </View>
 
         <EditText
             android:id="@+id/password_edittext"
@@ -44,7 +46,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TouchTargetSizeCheck"></EditText>
+            tools:ignore="TouchTargetSizeCheck">
+
+        </EditText>
     </RelativeLayout>
 
     <RelativeLayout
@@ -61,12 +65,14 @@
             android:id="@+id/email_rectangle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/rectangle_shape_gray"
+            android:background="@drawable/drawarectangle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            ></View>
+            >
+
+        </View>
 
         <EditText
             android:id="@+id/email_edittext"
@@ -83,7 +89,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TouchTargetSizeCheck"></EditText>
+            tools:ignore="TouchTargetSizeCheck">
+
+        </EditText>
     </RelativeLayout>
 
     <TextView
@@ -97,7 +105,9 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/email_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></TextView>
+        app:layout_constraintStart_toStartOf="parent">
+
+    </TextView>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/enter"
@@ -118,9 +128,8 @@
         android:id="@+id/google"
         android:layout_width="280dp"
         android:layout_height="44dp"
+        android:onClick="OnClick2"
         android:layout_marginTop="39dp"
-
-        android:background="@drawable/blue_button"
         android:fontFamily="@font/montserrat"
         android:text="@string/enter_with_google"
         android:textSize="14sp"
@@ -185,7 +194,9 @@
         app:layout_constraintTop_toBottomOf="@+id/enter"
         android:textSize="14sp"
         android:text="@string/or"
-        android:textColor="@color/pale"></TextView>
+        android:textColor="@color/pale">
+
+    </TextView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         app:layout_constraintBottom_toTopOf="@+id/find_your_company"
