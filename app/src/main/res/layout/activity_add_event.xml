@@ -10,6 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/welcomeImage"
         tools:context=".AddEventActivity">
 
         <ImageView
@@ -17,7 +18,6 @@
             android:layout_width="256dp"
             android:layout_height="244dp"
             android:layout_marginEnd="120dp"
-            android:onClick="ClickMan"
             android:src="@drawable/monitoring"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +25,7 @@
             app:layout_constraintVertical_bias="0.021" />
 
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/CreateEventsText"
             android:layout_width="196dp"
             android:layout_height="94dp"
             android:layout_marginStart="160dp"
@@ -43,7 +43,7 @@
             app:layout_constraintVertical_bias="0.026" />
 
         <TextView
-            android:id="@+id/textView19"
+            android:id="@+id/CollectFriendsText"
             android:layout_width="196dp"
             android:layout_height="94dp"
             android:layout_marginTop="32dp"
@@ -58,10 +58,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+            app:layout_constraintTop_toBottomOf="@+id/CreateEventsText" />
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/EventsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
@@ -72,10 +72,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.096"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+            app:layout_constraintTop_toBottomOf="@+id/CollectFriendsText" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/NameofEvent"
             android:layout_width="329dp"
             android:layout_height="59dp"
             android:layout_marginTop="16dp"
@@ -87,7 +87,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.312"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+            app:layout_constraintTop_toBottomOf="@+id/EventsText" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
@@ -100,10 +100,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.307"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText">
+            app:layout_constraintTop_toBottomOf="@+id/NameofEvent">
 
             <AutoCompleteTextView
-                android:id="@+id/auto_complete_text"
+
+                android:id="@+id/CategoryAttention"
                 android:layout_width="327dp"
                 android:layout_height="53dp"
                 android:inputType="none">
@@ -114,7 +115,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/textView22"
+            android:id="@+id/WhenMeetingWillBeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
@@ -128,7 +129,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
         <TextView
-            android:id="@+id/textView20"
+            android:id="@+id/WhichPeopleCanComeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -139,10 +140,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.354"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintTop_toBottomOf="@+id/SelectTime" />
 
         <ImageButton
-            android:id="@+id/WomanNotButton"
+            android:id="@+id/WomanWithMapImage"
             android:layout_width="199dp"
             android:layout_height="195dp"
             android:layout_marginTop="12dp"
@@ -151,7 +152,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/travel"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+            app:layout_constraintTop_toBottomOf="@+id/WhichPeopleCanComeText" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/WomanButton"
@@ -168,8 +169,8 @@
             android:textSize="14dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.677"
-            app:layout_constraintStart_toStartOf="@+id/WomanNotButton"
-            app:layout_constraintTop_toTopOf="@+id/WomanNotButton" />
+            app:layout_constraintStart_toStartOf="@+id/WomanWithMapImage"
+            app:layout_constraintTop_toTopOf="@+id/WomanWithMapImage" />
 
         <ImageButton
             android:id="@+id/MenButton"
@@ -182,10 +183,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.848"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/WomanNotButton" />
+            app:layout_constraintTop_toBottomOf="@+id/WomanWithMapImage" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/ManButton"
+            android:id="@+id/OnlyMenButtonAttention"
             android:layout_width="170dp"
             android:layout_height="73dp"
             android:layout_marginTop="40dp"
@@ -215,10 +216,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.101"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ManButton" />
+            app:layout_constraintTop_toBottomOf="@+id/OnlyMenButtonAttention" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/AllButton"
+            android:id="@+id/AllButtonAttention"
             android:layout_width="170dp"
             android:layout_height="73dp"
             android:layout_marginTop="28dp"
@@ -248,10 +249,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.096"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+            app:layout_constraintTop_toBottomOf="@+id/WhenMeetingWillBeText" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/justlinetext"
             android:layout_width="157dp"
             android:layout_height="52dp"
             android:layout_marginTop="44dp"
@@ -265,10 +266,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.523"
             app:layout_constraintStart_toEndOf="@+id/SelectDate"
-            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+            app:layout_constraintTop_toBottomOf="@+id/WhenMeetingWillBeText" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/justlinetext2"
             android:layout_width="117dp"
             android:layout_height="54dp"
             android:layout_marginStart="30dp"
@@ -282,11 +283,11 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.14"
-            app:layout_constraintStart_toEndOf="@+id/button"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintStart_toEndOf="@+id/SelectTime"
+            app:layout_constraintTop_toBottomOf="@+id/justlinetext" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/SelectTime"
             android:layout_width="157dp"
             android:layout_height="65dp"
             android:layout_marginTop="36dp"
@@ -312,11 +313,11 @@
             android:valueTo="80"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView23"
+            app:layout_constraintTop_toBottomOf="@+id/AgeText"
             app:values="@array/rangeSlider" />
 
         <TextView
-            android:id="@+id/textView23"
+            android:id="@+id/AgeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -330,7 +331,7 @@
             app:layout_constraintTop_toBottomOf="@+id/AllImage" />
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/ChildrenImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="28dp"
@@ -347,7 +348,7 @@
             app:layout_constraintGuide_begin="20dp" />
 
         <ImageView
-            android:id="@+id/imageView13"
+            android:id="@+id/GrangmaImage"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginTop="40dp"
@@ -358,7 +359,7 @@
             app:srcCompat="@drawable/grandmother" />
 
         <EditText
-            android:id="@+id/editTextNumber"
+            android:id="@+id/FromPeopleNumberAttention"
             android:layout_width="213dp"
             android:layout_height="48dp"
             android:layout_marginStart="20dp"
@@ -369,10 +370,10 @@
             android:hint="От"
             android:inputType="number"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintTop_toBottomOf="@+id/NumberPeopleText" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/NumberPeopleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -383,10 +384,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.156"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+            app:layout_constraintTop_toBottomOf="@+id/ChildrenImage" />
 
         <EditText
-            android:id="@+id/editTextNumber2"
+            android:id="@+id/ToPeopleNumberAttention"
             android:layout_width="213dp"
             android:layout_height="48dp"
             android:gravity="center"
@@ -402,7 +403,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+            app:layout_constraintTop_toBottomOf="@+id/FromPeopleNumberAttention" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/Switch"
@@ -418,14 +419,14 @@
             android:theme="@style/SCBSwitch"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
+            app:layout_constraintTop_toBottomOf="@+id/ToPeopleNumberAttention"
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/MoreInformationAttention"
             android:layout_width="285dp"
             android:layout_height="154dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/white_with_grey"
             android:ems="10"
             android:fontFamily="cursive"
@@ -439,18 +440,18 @@
             app:layout_constraintTop_toBottomOf="@+id/Switch" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button2"
+            android:id="@+id/CreateAnEventButton"
             android:layout_width="329dp"
             android:layout_height="72dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="80dp"
             android:background="@drawable/blackbutton"
             android:text="Создать событие"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.343"
+            app:layout_constraintHorizontal_bias="0.312"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+            app:layout_constraintTop_toBottomOf="@+id/MoreInformationAttention" />
 
         <ImageButton
             android:id="@+id/imageButton12"
@@ -461,7 +462,7 @@
             android:layout_marginBottom="4dp"
             android:background="#FFFFFF"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintBottom_toTopOf="@+id/CreateAnEventButton"
             app:layout_constraintStart_toStartOf="@+id/imageButton13"
             app:srcCompat="@drawable/people" />
 
@@ -473,7 +474,7 @@
             android:layout_marginBottom="4dp"
             android:background="@color/white"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintBottom_toTopOf="@+id/CreateAnEventButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/network" />
 

@@ -16,25 +16,26 @@
             android:id="@+id/imageView3"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+
+
             app:layout_constraintStart_toStartOf="parent"
-
-
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/ellipseblue" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/justlinetext"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="25dp"
             android:fontFamily="@font/montserrat"
             android:text="InTouch"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintHorizontal_bias="0.047"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,7 +60,7 @@
             tools:ignore="TextContrastCheck" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageButton"
+            android:id="@+id/TryItAllAttention"
             android:layout_width="330dp"
             android:layout_height="162dp"
             android:layout_marginTop="20dp"
@@ -75,32 +76,31 @@
             app:strokeWidth="6dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
+
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/justlinetext2"
             android:layout_width="188dp"
             android:layout_height="100dp"
+            android:layout_marginStart="12dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Попробуй все"
             android:textColor="#FFFFFF"
             android:textSize="32sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton"
-            app:layout_constraintHorizontal_bias="0.126"
-            app:layout_constraintStart_toStartOf="@+id/imageButton"
-            app:layout_constraintTop_toTopOf="@+id/imageButton"
-            app:layout_constraintVertical_bias="0.406" />
+            app:layout_constraintBottom_toBottomOf="@+id/TryItAllAttention"
+            app:layout_constraintStart_toStartOf="@+id/TryItAllAttention"
+            app:layout_constraintTop_toTopOf="@+id/TryItAllAttention"
+            app:layout_constraintVertical_bias="0.37" />
 
         <TextView
             android:layout_width="222dp"
             android:layout_height="39dp"
+            android:layout_marginStart="32dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Все актуальные события"
             android:textColor="#BFB8B8"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-            app:layout_constraintEnd_toEndOf="@+id/textView2"
-            app:layout_constraintHorizontal_bias="0.185"
-            app:layout_constraintStart_toStartOf="@+id/textView2" />
+            app:layout_constraintBottom_toBottomOf="@+id/TryItAllAttention"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textView10"
@@ -115,10 +115,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.069"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+            app:layout_constraintTop_toBottomOf="@+id/TryItAllAttention" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageButton2"
+            android:id="@+id/ComfortableCompanyAttention"
             android:layout_width="150sp"
             android:layout_height="200sp"
             android:layout_marginTop="56dp"
@@ -132,7 +132,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.102"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton"
+            app:layout_constraintTop_toBottomOf="@+id/TryItAllAttention"
             app:srcCompat="@drawable/comfcompany"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -146,10 +146,10 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_anchorGravity="top|center"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton2"
+            app:layout_constraintBottom_toBottomOf="@+id/ComfortableCompanyAttention"
+            app:layout_constraintEnd_toEndOf="@+id/ComfortableCompanyAttention"
             app:layout_constraintHorizontal_bias="0.214"
-            app:layout_constraintStart_toStartOf="@+id/imageButton2" />
+            app:layout_constraintStart_toStartOf="@+id/ComfortableCompanyAttention" />
 
         <TextView
             android:layout_width="132dp"
@@ -165,7 +165,7 @@
             app:layout_constraintTop_toBottomOf="@+id/company" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageButton3"
+            android:id="@+id/SportVacationAttention"
             android:layout_width="150dp"
             android:layout_height="200dp"
             android:layout_marginTop="56dp"
@@ -176,8 +176,8 @@
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.441"
-            app:layout_constraintStart_toEndOf="@+id/imageButton2"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton"
+            app:layout_constraintStart_toEndOf="@+id/ComfortableCompanyAttention"
+            app:layout_constraintTop_toBottomOf="@+id/TryItAllAttention"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/photo_1522040942177_269680274214"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -191,10 +191,10 @@
             android:text="@string/Vocation"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton3"
+            app:layout_constraintEnd_toEndOf="@+id/SportVacationAttention"
             app:layout_constraintHorizontal_bias="0.391"
-            app:layout_constraintStart_toStartOf="@+id/imageButton3"
-            app:layout_constraintTop_toTopOf="@+id/imageButton3" />
+            app:layout_constraintStart_toStartOf="@+id/SportVacationAttention"
+            app:layout_constraintTop_toTopOf="@+id/SportVacationAttention" />
 
         <TextView
             android:id="@+id/textView12"
@@ -211,7 +211,7 @@
             app:layout_constraintTop_toBottomOf="@+id/vocation" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageButton4"
+            android:id="@+id/PartyAttention"
             android:layout_width="150dp"
             android:layout_height="200dp"
             android:layout_marginStart="25dp"
@@ -225,7 +225,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.08"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+            app:layout_constraintTop_toBottomOf="@+id/ComfortableCompanyAttention"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/aleksandr_popov_3_kh6xsu9xq_unsplash"
             app:strokeColor="#FFFFFF"
@@ -242,10 +242,10 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_anchorGravity="top|center"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton4"
+            app:layout_constraintBottom_toBottomOf="@+id/PartyAttention"
+            app:layout_constraintEnd_toEndOf="@+id/PartyAttention"
             app:layout_constraintHorizontal_bias="0.228"
-            app:layout_constraintStart_toStartOf="@+id/imageButton4" />
+            app:layout_constraintStart_toStartOf="@+id/PartyAttention" />
 
         <TextView
             android:layout_width="138dp"
@@ -261,7 +261,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageButton5"
+            android:id="@+id/CultureAttention"
             android:layout_width="150dp"
             android:layout_height="200dp"
             android:layout_marginTop="16dp"
@@ -270,8 +270,8 @@
             app:layout_anchorGravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.506"
-            app:layout_constraintStart_toEndOf="@+id/imageButton4"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+            app:layout_constraintStart_toEndOf="@+id/PartyAttention"
+            app:layout_constraintTop_toBottomOf="@+id/SportVacationAttention"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/photo_1524014482380_0988169f598d"
             app:strokeColor="#FFFFFF"
@@ -289,9 +289,9 @@
             android:textSize="20sp"
             app:layout_anchor="@+id/textView11"
             app:layout_anchorGravity="top|center"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton5"
+            app:layout_constraintEnd_toEndOf="@+id/CultureAttention"
             app:layout_constraintHorizontal_bias="0.392"
-            app:layout_constraintStart_toStartOf="@+id/imageButton5"
+            app:layout_constraintStart_toStartOf="@+id/CultureAttention"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
         <TextView
@@ -309,7 +309,7 @@
             app:layout_constraintTop_toBottomOf="@+id/inflate" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageView"
+            android:id="@+id/OtherAttention"
             android:layout_width="313dp"
             android:layout_height="140dp"
             android:layout_marginTop="64dp"
@@ -318,7 +318,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.437"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+            app:layout_constraintTop_toBottomOf="@+id/CultureAttention"
             app:shapeAppearanceOverlay="@style/circular"
             app:strokeColor="#FFFFFF"
             app:strokeWidth="3dp" />
@@ -332,10 +332,10 @@
             android:text="Другое"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/OtherAttention"
             app:layout_constraintHorizontal_bias="0.068"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
+            app:layout_constraintStart_toStartOf="@+id/OtherAttention"
+            app:layout_constraintTop_toTopOf="@+id/OtherAttention" />
 
         <TextView
             android:id="@+id/textView16"
@@ -362,11 +362,11 @@
             android:text="Найди еще больше событий по душе"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintBottom_toTopOf="@+id/OtherAttention"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.088"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+            app:layout_constraintTop_toBottomOf="@+id/PartyAttention"
             app:layout_constraintVertical_bias="0.09" />
 
 

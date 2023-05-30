@@ -71,8 +71,8 @@ public class AddFragment extends Fragment {
 //
 
 
-//        binding.WomanButton.setOnClickListener(new View.OnClickListener() {
+//        binding.OnlyWoMemButtonImageAttention.setOnClickListener(new View.OnClickListener() {
 //            public void onClick(View v) {
-////                binding.WomanButton.setBackgroundColor(Color.RED);
+////                binding.OnlyWoMemButtonImageAttention.setBackgroundColor(Color.RED);
 //            }
 //        });

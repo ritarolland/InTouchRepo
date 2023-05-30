@@ -24,7 +24,7 @@
         app:srcCompat="@drawable/ellipseblue" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/justlinetext"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="70sp"
@@ -56,7 +56,7 @@
         android:background="#484848" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/TryItAllAttention"
         android:layout_width="330sp"
         android:layout_height="170sp"
         android:layout_marginLeft="40sp"
@@ -70,7 +70,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/justlinetext2"
         android:layout_width="171dp"
         android:layout_height="78dp"
         android:layout_marginLeft="60sp"
@@ -102,7 +102,7 @@
         android:textSize="16sp" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/ComfortableCompanyAttention"
         android:layout_width="150sp"
         android:layout_height="200sp"
         android:layout_marginLeft="40sp"
@@ -136,7 +136,7 @@
         android:textSize="14sp" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/SportVacationAttention"
         android:layout_width="150dp"
         android:layout_height="200dp"
         android:layout_marginLeft="220sp"
@@ -168,7 +168,7 @@
         android:textSize="14sp" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/PartyAttention"
         android:layout_width="150sp"
         android:layout_height="200sp"
         android:layout_marginLeft="40sp"
@@ -204,14 +204,14 @@
         android:textSize="14sp" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/CultureAttention"
         android:layout_width="150dp"
         android:layout_height="200dp"
         android:layout_marginLeft="220sp"
         android:layout_marginTop="610sp"
         android:background="@color/black"
         android:scaleType="centerCrop"
-        app:layout_anchor="@+id/imageButton5"
+        app:layout_anchor="@+id/CultureAttention"
         app:layout_anchorGravity="center"
         app:srcCompat="@drawable/photo_1524014482380_0988169f598d"
         tools:ignore="SpeakableTextPresentCheck" />

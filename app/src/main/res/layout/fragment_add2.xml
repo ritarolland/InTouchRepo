@@ -103,7 +103,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editTextText">
 
             <AutoCompleteTextView
-                android:id="@+id/auto_complete_text"
+                android:id="@+id/CategoryAttention"
                 android:layout_width="327dp"
                 android:layout_height="53dp"
                 android:inputType="none">
@@ -114,7 +114,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/textView22"
+            android:id="@+id/WhenMeetingWillBeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -146,7 +146,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/textView20"
+            android:id="@+id/WhichPeopleCanComeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -160,7 +160,7 @@
             app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
         <ImageButton
-            android:id="@+id/WomanNotButton"
+            android:id="@+id/WomanWithMapImage"
             android:layout_width="199dp"
             android:layout_height="195dp"
             android:layout_marginStart="16dp"
@@ -172,10 +172,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+            app:layout_constraintTop_toBottomOf="@+id/WhichPeopleCanComeText" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/WomanButton"
+            android:id="@+id/OnlyWoMemButtonImageAttention"
             android:layout_width="170dp"
             android:layout_height="73dp"
             android:layout_marginTop="36dp"
@@ -188,11 +188,11 @@
             android:textSize="14dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.677"
-            app:layout_constraintStart_toStartOf="@+id/WomanNotButton"
-            app:layout_constraintTop_toTopOf="@+id/WomanNotButton" />
+            app:layout_constraintStart_toStartOf="@+id/WomanWithMapImage"
+            app:layout_constraintTop_toTopOf="@+id/WomanWithMapImage" />
 
         <ImageButton
-            android:id="@+id/MenButton"
+            android:id="@+id/MemButtonImage"
             android:layout_width="195dp"
             android:layout_height="191dp"
             android:layout_marginTop="12dp"
@@ -202,10 +202,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.848"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/WomanNotButton" />
+            app:layout_constraintTop_toBottomOf="@+id/WomanWithMapImage" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/ManButton"
+            android:id="@+id/MenImage"
             android:layout_width="170dp"
             android:layout_height="73dp"
             android:layout_marginTop="40dp"
@@ -217,13 +217,13 @@
             android:text="Только мужчины"
             android:textColor="#000000"
             android:textSize="14dp"
-            app:layout_constraintEnd_toEndOf="@+id/MenButton"
+            app:layout_constraintEnd_toEndOf="@+id/MemButtonImage"
             app:layout_constraintHorizontal_bias="0.703"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/MenButton" />
+            app:layout_constraintTop_toTopOf="@+id/MemButtonImage" />
 
         <ImageButton
-            android:id="@+id/AllImage"
+            android:id="@+id/AllButtonAttention"
             android:layout_width="195dp"
             android:layout_height="191dp"
             android:layout_marginTop="96dp"
@@ -234,10 +234,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.101"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ManButton" />
+            app:layout_constraintTop_toBottomOf="@+id/MenImage" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/AllButton"
+            android:id="@+id/AllCanComeAttention"
             android:layout_width="170dp"
             android:layout_height="73dp"
             android:layout_marginTop="28dp"
@@ -250,8 +250,8 @@
             android:textSize="14dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.666"
-            app:layout_constraintStart_toStartOf="@+id/AllImage"
-            app:layout_constraintTop_toTopOf="@+id/AllImage" />
+            app:layout_constraintStart_toStartOf="@+id/AllButtonAttention"
+            app:layout_constraintTop_toTopOf="@+id/AllButtonAttention" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

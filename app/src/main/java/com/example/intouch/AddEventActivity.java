@@ -29,13 +29,13 @@ import java.util.Locale;
 
 public class AddEventActivity extends AppCompatActivity {
 
-    AppCompatButton womanButton;
-    AppCompatButton manButton;
-    AppCompatButton allButton;
+    AppCompatButton WomanButton;
+    AppCompatButton OnlyMenButtonAttention;
+    AppCompatButton AllButtonAttention;
     AppCompatButton SelectDate;
 
     int counter = 1;
-    EditText editTextNumber2;
+    EditText ToPeopleNumberAttention;
 
     SwitchCompat Switch;
 
@@ -71,11 +71,10 @@ public class AddEventActivity extends AppCompatActivity {
 
         stepSlider = findViewById(R.id.RangeSlider);
         Switch = (SwitchCompat) findViewById(R.id.Switch);
-        editTextNumber2 = (EditText) findViewById(R.id.editTextNumber2);
+        ToPeopleNumberAttention = (EditText) findViewById(R.id.ToPeopleNumberAttention);
 
 
-
-        autoCompleteTextView = findViewById(R.id.auto_complete_text);
+        autoCompleteTextView = findViewById(R.id.CategoryAttention);
         adapterItems = new ArrayAdapter<String>(this, R.layout.list_item, item);
 
         autoCompleteTextView.setAdapter(adapterItems);
@@ -92,9 +91,9 @@ public class AddEventActivity extends AppCompatActivity {
 
 //        SelectDate = findViewById(R.id.SelectDate);
 //        SelectDate.setBackgroundResource(R.drawable.man_background);
-        text = findViewById(R.id.textView);
-        SelectTime = findViewById(R.id.button);
-        Text2 = findViewById(R.id.textView2);
+        text = findViewById(R.id.justlinetext);
+        SelectTime = findViewById(R.id.SelectTime);
+        Text2 = findViewById(R.id.justlinetext2);
 
         MaterialDatePicker datePicker = MaterialDatePicker.Builder.datePicker().setTitleText("Выберите дату").setSelection(MaterialDatePicker.todayInUtcMilliseconds()).build();
 
@@ -144,28 +143,28 @@ public class AddEventActivity extends AppCompatActivity {
 
 
 
-        womanButton = (AppCompatButton) findViewById(R.id.WomanButton);
-        manButton = (AppCompatButton) findViewById(R.id.ManButton);
-        allButton = (AppCompatButton) findViewById(R.id.AllButton);
+        WomanButton = (AppCompatButton) findViewById(R.id.WomanButton);
+        OnlyMenButtonAttention = (AppCompatButton) findViewById(R.id.OnlyMenButtonAttention);
+        AllButtonAttention = (AppCompatButton) findViewById(R.id.AllButtonAttention);
 
 
     }
     public void ClickWoman(View view){
-        womanButton.setBackgroundResource(R.drawable.woman_backgroud);
-        manButton.setBackgroundResource(R.drawable.white_with_orange);
-        allButton.setBackgroundResource(R.drawable.white_with_greenlines);
+        WomanButton.setBackgroundResource(R.drawable.woman_backgroud);
+        OnlyMenButtonAttention.setBackgroundResource(R.drawable.white_with_orange);
+        AllButtonAttention.setBackgroundResource(R.drawable.white_with_greenlines);
 
     }
     public void ClickMan(View view){
-        manButton.setBackgroundResource(R.drawable.man_background);
-        womanButton.setBackgroundResource(R.drawable.white_with_blacklines);
-        allButton.setBackgroundResource(R.drawable.white_with_greenlines);
+        OnlyMenButtonAttention.setBackgroundResource(R.drawable.man_background);
+        WomanButton.setBackgroundResource(R.drawable.white_with_blacklines);
+        AllButtonAttention.setBackgroundResource(R.drawable.white_with_greenlines);
 
     }
     public void ClickAll(View view){
-        womanButton.setBackgroundResource(R.drawable.white_with_blacklines);
-        manButton.setBackgroundResource(R.drawable.white_with_orange);
-        allButton.setBackgroundResource(R.drawable.all_background);
+        WomanButton.setBackgroundResource(R.drawable.white_with_blacklines);
+        OnlyMenButtonAttention.setBackgroundResource(R.drawable.white_with_orange);
+        AllButtonAttention.setBackgroundResource(R.drawable.all_background);
 
     }
 
@@ -177,14 +176,14 @@ public class AddEventActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (counter % 2 == 1) {
                     counter += 1;
-                    editTextNumber2.setText("Любое");
-                    editTextNumber2.setInputType(0);
+                    ToPeopleNumberAttention.setText("Любое");
+                    ToPeopleNumberAttention.setInputType(0);
                 }
                 else {
                     counter += 1;
-                    editTextNumber2.setInputType(InputType.TYPE_CLASS_NUMBER);
-                    editTextNumber2.setText("");
-                    editTextNumber2.setHint("Введите число");
+                    ToPeopleNumberAttention.setInputType(InputType.TYPE_CLASS_NUMBER);
+                    ToPeopleNumberAttention.setText("");
+                    ToPeopleNumberAttention.setHint("Введите число");
                 }
             }
 
