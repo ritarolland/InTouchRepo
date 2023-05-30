@@ -13,9 +13,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Home extends AppCompatActivity {
     ActivityHomeBinding activityHomeBinding;
-    private DatabaseReference inTouchDatabase;
     FirebaseAuth mAuth;
-    private String USER_KEY = "User";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +27,6 @@ public class Home extends AppCompatActivity {
 
     private void init() {
         mAuth = FirebaseAuth.getInstance();
-        inTouchDatabase = FirebaseDatabase.getInstance().getReference(USER_KEY);
     }
 
     public void onClickSignOut(View view) {

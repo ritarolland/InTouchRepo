@@ -15,6 +15,6 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_marginTop="15dp"></androidx.recyclerview.widget.RecyclerView>
+        android:layout_marginTop="15dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
