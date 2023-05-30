@@ -260,8 +260,8 @@ public class TheMostMainActivity extends AppCompatActivity {
 
                     selectedTab = 5;
 
-                    Intent intent = new Intent(TheMostMainActivity.this, ProfileActivity.class);
-                    startActivity(intent);
+//                    Intent intent = new Intent(TheMostMainActivity.this, ProfileActivity.class);
+//                    startActivity(intent);
 
                 }
 
