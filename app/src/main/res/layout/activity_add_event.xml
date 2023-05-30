@@ -8,9 +8,10 @@
     tools:context=".AddEventActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcomeImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/welcomeImage"
+        android:background="#FFFFFF"
         tools:context=".AddEventActivity">
 
         <ImageView
@@ -79,7 +80,7 @@
             android:layout_width="329dp"
             android:layout_height="59dp"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#00C5FF"
+            android:backgroundTint="#000000"
             android:ems="10"
             android:hint="Название"
             android:inputType="text"
@@ -363,10 +364,10 @@
             android:layout_width="213dp"
             android:layout_height="48dp"
             android:layout_marginStart="20dp"
-            android:gravity="center"
             android:layout_marginTop="40dp"
             android:background="@drawable/drawarectangle"
             android:ems="10"
+            android:gravity="center"
             android:hint="От"
             android:inputType="number"
             app:layout_constraintStart_toStartOf="parent"
@@ -390,14 +391,14 @@
             android:id="@+id/ToPeopleNumberAttention"
             android:layout_width="213dp"
             android:layout_height="48dp"
-            android:gravity="center"
             android:layout_marginStart="20dp"
             android:layout_marginTop="12dp"
-
-
             android:background="@drawable/drawarectangle"
 
+
             android:ems="10"
+
+            android:gravity="center"
             android:hint="   До"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
@@ -410,7 +411,7 @@
             android:layout_width="342dp"
             android:layout_height="48dp"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="16dp"
             android:layout_marginBottom="24dp"
             android:checked="false"
             android:fontFamily="@font/inter_semibold"
@@ -429,7 +430,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/white_with_grey"
             android:ems="10"
-            android:fontFamily="cursive"
+            android:fontFamily="@font/montserrat"
             android:gravity="center"
             android:hint="@string/EventDescription"
             android:inputType="text"
