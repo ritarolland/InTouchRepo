@@ -259,6 +259,10 @@ public class TheMostMainActivity extends AppCompatActivity {
                     AddLayout.startAnimation(scaleAnimation);
 
                     selectedTab = 5;
+
+                    Intent intent = new Intent(TheMostMainActivity.this, ProfileActivity.class);
+                    startActivity(intent);
+
                 }
 
             }
