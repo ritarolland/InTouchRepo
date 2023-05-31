@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#101740"
     tools:context=".HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#000000">
+        android:background="#060D33">
 
 
         <ImageView
@@ -41,8 +42,8 @@
 
         <EditText
             android:id="@+id/SearchEditText"
-            android:layout_width="323dp"
-            android:layout_height="38dp"
+            android:layout_width="332dp"
+            android:layout_height="42dp"
             android:layout_marginTop="76dp"
 
             android:background="@drawable/drawarectangle"
@@ -107,7 +108,7 @@
             android:layout_width="250sp"
             android:layout_height="20sp"
             android:layout_marginTop="16dp"
-            android:background="#000000"
+            android:background="#060D33"
             android:fontFamily="@font/montserrat_extrabold"
             android:text="Ищешь что-то конкретное?"
             android:textColor="#FFFFFF"
@@ -124,16 +125,16 @@
             android:layout_marginTop="56dp"
             android:background="#000000"
             android:scaleType="centerCrop"
-            app:shapeAppearanceOverlay="@style/circular"
-            app:strokeWidth="3dp"
-            app:strokeColor="#FFFFFF"
-
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.102"
             app:layout_constraintStart_toStartOf="parent"
+
+
             app:layout_constraintTop_toBottomOf="@+id/TryItAllAttention"
+            app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/comfcompany"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="3dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -171,15 +172,15 @@
             android:layout_marginTop="56dp"
             android:background="#000000"
             android:scaleType="centerCrop"
-            app:strokeWidth="3dp"
-            app:strokeColor="#FFFFFF"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.441"
+
             app:layout_constraintStart_toEndOf="@+id/ComfortableCompanyAttention"
             app:layout_constraintTop_toBottomOf="@+id/TryItAllAttention"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/photo_1522040942177_269680274214"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="3dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -215,7 +216,7 @@
             android:layout_width="150dp"
             android:layout_height="200dp"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="243dp"
             android:background="@color/black"
             android:scaleType="centerCrop"
@@ -264,12 +265,11 @@
             android:id="@+id/CultureAttention"
             android:layout_width="150dp"
             android:layout_height="200dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:background="@color/black"
             android:scaleType="centerCrop"
             app:layout_anchorGravity="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toEndOf="@+id/PartyAttention"
             app:layout_constraintTop_toBottomOf="@+id/SportVacationAttention"
             app:shapeAppearanceOverlay="@style/circular"
@@ -310,13 +310,13 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/OtherAttention"
-            android:layout_width="313dp"
-            android:layout_height="140dp"
+            android:layout_width="332dp"
+            android:layout_height="133dp"
             android:layout_marginTop="64dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ignacio_brosa_vjdbpuxus_s_unsplash"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.437"
+            app:layout_constraintHorizontal_bias="0.426"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CultureAttention"
             app:shapeAppearanceOverlay="@style/circular"
@@ -357,21 +357,31 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="10dp"
-            android:background="#000000"
+            android:background="#181D3A"
             android:fontFamily="@font/montserrat_extrabold"
             android:text="Найди еще больше событий по душе"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/OtherAttention"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.088"
+            app:layout_constraintHorizontal_bias="0.203"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/PartyAttention"
-            app:layout_constraintVertical_bias="0.09" />
+            app:layout_constraintVertical_bias="0.411" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="#060D33"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.522"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/OtherAttention" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </ScrollView>

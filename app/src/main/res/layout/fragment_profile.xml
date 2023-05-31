@@ -142,22 +142,24 @@
             android:layout_alignRight="@id/imageView17"
             android:layout_alignBottom="@id/imageView17"
 
-            android:layout_marginBottom="185dp"
+            android:layout_marginBottom="180dp"
             android:scaleType="fitXY"
             android:src="@drawable/grey_rectangle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextViewEmail" />
 
         <ImageView
             android:id="@+id/imageView27"
             android:layout_width="281dp"
             android:layout_height="105dp"
-            android:layout_marginEnd="40dp"
             android:layout_marginBottom="60dp"
             android:src="@drawable/grey_rectangle"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView26" />
 
         <ImageView
             android:id="@+id/imageView28"
@@ -181,7 +183,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView27"
             app:layout_constraintEnd_toEndOf="@+id/imageView27"
-            app:layout_constraintHorizontal_bias="0.212"
+            app:layout_constraintHorizontal_bias="0.454"
             app:layout_constraintStart_toEndOf="@+id/imageView28" />
 
         <TextView
@@ -201,11 +203,11 @@
             android:id="@+id/TextViewEmail"
             android:layout_width="281dp"
             android:layout_height="105dp"
-            android:layout_marginEnd="40dp"
             android:layout_marginBottom="276dp"
             android:src="@drawable/grey_rectangle"
             app:layout_constraintBottom_toBottomOf="@+id/imageView17"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/imageView24"
@@ -265,7 +267,7 @@
             android:textStyle="normal"
             app:layout_constraintBottom_toBottomOf="@+id/imageView27"
             app:layout_constraintEnd_toEndOf="@+id/imageView27"
-            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintHorizontal_bias="0.275"
             app:layout_constraintStart_toEndOf="@+id/imageView28"
             app:layout_constraintTop_toBottomOf="@+id/textView24"
             app:layout_constraintVertical_bias="0.0" />
@@ -280,7 +282,7 @@
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="@+id/imageView26"
-            app:layout_constraintHorizontal_bias="0.228"
+            app:layout_constraintHorizontal_bias="0.457"
             app:layout_constraintStart_toEndOf="@+id/imageView24"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 

@@ -29,7 +29,7 @@ public class TheMostMainActivity extends AppCompatActivity {
 
 
         final LinearLayout HomeLayout = findViewById(R.id.HomeLayout);
-        final LinearLayout NotificationLayout = findViewById(R.id.NotificationLayout);
+//        final LinearLayout NotificationLayout = findViewById(R.id.NotificationLayout);
         final LinearLayout AddLayout = findViewById(R.id.AddLayout);
         final LinearLayout ChatLayout = findViewById(R.id.ChatLayout);
         final LinearLayout ProfileLayout = findViewById(R.id.ProfileLayout);
@@ -37,14 +37,14 @@ public class TheMostMainActivity extends AppCompatActivity {
 
 
         final ImageView HomeImage = findViewById(R.id.HomeImage);
-        final ImageView NotificationImage = findViewById(R.id.NotificationImage);
+//        final ImageView NotificationImage = findViewById(R.id.NotificationImage);
         final ImageView AddImage = findViewById(R.id.AddImage);
         final ImageView ChatImage = findViewById(R.id.ChatImage);
         final ImageView ProfileImage = findViewById(R.id.ProfileImage);
 
 
         final TextView HomeText = findViewById(R.id.HomeText);
-        final TextView NotificationText = findViewById(R.id.NotificationText);
+//        final TextView NotificationText = findViewById(R.id.NotificationText);
         final TextView AddText = findViewById(R.id.AddText);
         final TextView ChatText = findViewById(R.id.ChatText);
         final TextView ProfileText = findViewById(R.id.ProfileText);
@@ -56,19 +56,19 @@ public class TheMostMainActivity extends AppCompatActivity {
                 if (selectedTab != 1){
                     getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, HomeFragment.class, null).commit();
 
-                    NotificationText.setVisibility(View.GONE);
+//                    NotificationText.setVisibility(View.GONE);
                     AddText.setVisibility(View.GONE);
                     ChatText.setVisibility(View.GONE);
                     ProfileText.setVisibility(View.GONE);
 
 
-                    NotificationImage.setImageResource(R.drawable.notificationicon_selected); //here
+//                    NotificationImage.setImageResource(R.drawable.notificationicon_selected); //here
                     AddImage.setImageResource(R.drawable.add_selected);
                     ChatImage.setImageResource(R.drawable.messages_question_selected);
                     ProfileImage.setImageResource(R.drawable.user_selected);
 
 
-                    NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+//                    NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     AddLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     ChatLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     ProfileLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -89,71 +89,71 @@ public class TheMostMainActivity extends AppCompatActivity {
                 }
             }
         });
-        NotificationLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (selectedTab != 2){
-
-                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, NotificationFragment.class, null).commit();
-
-                    HomeText.setVisibility(View.GONE);
-                    AddText.setVisibility(View.GONE);
-                    ChatText.setVisibility(View.GONE);
-                    ProfileText.setVisibility(View.GONE);
-
-
-                    HomeImage.setImageResource(R.drawable.homeicon_selected);
-                    AddImage.setImageResource(R.drawable.add_selected);
-                    ChatImage.setImageResource(R.drawable.messages_question_selected);
-                    ProfileImage.setImageResource(R.drawable.user_selected);
-
-
-
-                    HomeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    AddLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    ChatLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    ProfileLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-
-
-
-                    NotificationText.setVisibility(View.VISIBLE);
-                    NotificationImage.setImageResource(R.drawable.notificationicon_selected);
-                    NotificationLayout.setBackgroundResource(R.drawable.icons_round);
-
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
-                    scaleAnimation.setDuration(200);
-                    scaleAnimation.setFillAfter(true);
-                    NotificationLayout.startAnimation(scaleAnimation);
-
-                    selectedTab = 2;
-
-                }
-
-            }
-        });
+//        NotificationLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                if (selectedTab != 2){
+//
+//                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, NotificationFragment.class, null).commit();
+//
+//                    HomeText.setVisibility(View.GONE);
+//                    AddText.setVisibility(View.GONE);
+//                    ChatText.setVisibility(View.GONE);
+//                    ProfileText.setVisibility(View.GONE);
+//
+//
+//                    HomeImage.setImageResource(R.drawable.homeicon_selected);
+//                    AddImage.setImageResource(R.drawable.add_selected);
+//                    ChatImage.setImageResource(R.drawable.messages_question_selected);
+//                    ProfileImage.setImageResource(R.drawable.user_selected);
+//
+//
+//
+//                    HomeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+//                    AddLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+//                    ChatLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+//                    ProfileLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+//
+//
+//
+//                    NotificationText.setVisibility(View.VISIBLE);
+//                    NotificationImage.setImageResource(R.drawable.notificationicon_selected);
+//                    NotificationLayout.setBackgroundResource(R.drawable.icons_round);
+//
+//                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+//                    scaleAnimation.setDuration(200);
+//                    scaleAnimation.setFillAfter(true);
+//                    NotificationLayout.startAnimation(scaleAnimation);
+//
+//                    selectedTab = 2;
+//
+//                }
+//
+//            }
+//        });
         AddLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (selectedTab != 3){
+                if (selectedTab != 2){
 //                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, AddFragment.class, null).commit();
 
                     HomeText.setVisibility(View.GONE);
-                    NotificationText.setVisibility(View.GONE);
+//                    NotificationText.setVisibility(View.GONE);
                     ChatText.setVisibility(View.GONE);
                     ProfileText.setVisibility(View.GONE);
 
 
                     HomeImage.setImageResource(R.drawable.homeicon_selected);
-                    NotificationImage.setImageResource(R.drawable.notificationicon_selected);
+//                    NotificationImage.setImageResource(R.drawable.notificationicon_selected);
                     ChatImage.setImageResource(R.drawable.messages_question_selected);
                     ProfileImage.setImageResource(R.drawable.user_selected);
 
 
 
                     HomeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+//                    NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     ChatLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     ProfileLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
@@ -168,7 +168,7 @@ public class TheMostMainActivity extends AppCompatActivity {
                     scaleAnimation.setFillAfter(true);
                     AddLayout.startAnimation(scaleAnimation);
 
-                    selectedTab = 3;
+                    selectedTab = 2;
 
                     Intent intent = new Intent(TheMostMainActivity.this, AddEventActivity.class);
                     startActivity(intent);
@@ -183,24 +183,24 @@ public class TheMostMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (selectedTab != 4){
+                if (selectedTab != 3){
                     getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, ChatFragment.class, null).commit();
 
                     HomeText.setVisibility(View.GONE);
-                    NotificationText.setVisibility(View.GONE);
+//                    NotificationText.setVisibility(View.GONE);
                     AddText.setVisibility(View.GONE);
                     ProfileText.setVisibility(View.GONE);
 
 
                     HomeImage.setImageResource(R.drawable.homeicon_selected);
-                    NotificationImage.setImageResource(R.drawable.notificationicon_selected);
+//                    NotificationImage.setImageResource(R.drawable.notificationicon_selected);
                     AddImage.setImageResource(R.drawable.add_selected);
                     ProfileImage.setImageResource(R.drawable.user_selected);
 
 
 
                     HomeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+//                    NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     AddLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     ProfileLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
@@ -216,7 +216,7 @@ public class TheMostMainActivity extends AppCompatActivity {
                     AddLayout.startAnimation(scaleAnimation);
 
 
-                    selectedTab = 4;
+                    selectedTab = 3;
                 }
 
             }
@@ -226,24 +226,24 @@ public class TheMostMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (selectedTab != 5){
+                if (selectedTab != 4){
                     getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, ProfileFragment.class, null).commit();
 
                     HomeText.setVisibility(View.GONE);
-                    NotificationText.setVisibility(View.GONE);
+//                    NotificationText.setVisibility(View.GONE);
                     AddText.setVisibility(View.GONE);
                     ChatText.setVisibility(View.GONE);
 
 
                     HomeImage.setImageResource(R.drawable.homeicon_selected);
-                    NotificationImage.setImageResource(R.drawable.notificationicon_selected);
+//                    NotificationImage.setImageResource(R.drawable.notificationicon_selected);
                     AddImage.setImageResource(R.drawable.add_selected);
                     ChatImage.setImageResource(R.drawable.messages_question_selected);
 
 
 
                     HomeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+//                    NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     AddLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     ChatLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
@@ -258,7 +258,7 @@ public class TheMostMainActivity extends AppCompatActivity {
                     scaleAnimation.setFillAfter(true);
                     AddLayout.startAnimation(scaleAnimation);
 
-                    selectedTab = 5;
+                    selectedTab = 4;
 
 //                    Intent intent = new Intent(TheMostMainActivity.this, ProfileActivity.class);
 //                    startActivity(intent);
