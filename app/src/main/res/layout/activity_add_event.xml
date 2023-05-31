@@ -79,14 +79,14 @@
             android:id="@+id/NameofEvent"
             android:layout_width="329dp"
             android:layout_height="59dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="#000000"
             android:ems="10"
             android:hint="Название"
             android:inputType="text"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.312"
+            app:layout_constraintHorizontal_bias="0.375"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/EventsText" />
 
@@ -96,10 +96,11 @@
             android:layout_width="341dp"
             android:layout_height="76dp"
             android:layout_margin="16dp"
-            android:hint="Категория"
+            android:layout_marginTop="476dp"
 
+            android:hint="Категория"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.307"
+            app:layout_constraintHorizontal_bias="0.423"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/NameofEvent">
 
