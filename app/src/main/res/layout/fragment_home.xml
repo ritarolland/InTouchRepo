@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#060D33">
+        android:background="#222222">
 
 
         <ImageView
@@ -42,8 +42,8 @@
 
         <EditText
             android:id="@+id/SearchEditText"
-            android:layout_width="332dp"
-            android:layout_height="42dp"
+            android:layout_width="334dp"
+            android:layout_height="45dp"
             android:layout_marginTop="76dp"
 
             android:background="@drawable/drawarectangle"
@@ -60,23 +60,23 @@
             app:shapeAppearanceOverlay="@style/circular"
             tools:ignore="TextContrastCheck" />
 
+
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/TryItAllAttention"
-            android:layout_width="330dp"
-            android:layout_height="162dp"
+            android:layout_width="324dp"
+            android:layout_height="171dp"
             android:layout_marginTop="20dp"
             android:background="#000000"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.366"
+            app:layout_constraintHorizontal_bias="0.434"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/SearchEditText"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/_614716489_120_p_fon_dlya_afishi_diskoteki_127"
             app:strokeColor="#FFFFFF"
-            app:strokeWidth="6dp"
+            app:strokeWidth="3dp"
             tools:ignore="SpeakableTextPresentCheck" />
-
 
         <TextView
             android:id="@+id/justlinetext2"
@@ -105,16 +105,16 @@
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="250sp"
-            android:layout_height="20sp"
-            android:layout_marginTop="16dp"
-            android:background="#060D33"
+            android:layout_width="303dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="12dp"
+            android:background="#222222"
             android:fontFamily="@font/montserrat_extrabold"
             android:text="Ищешь что-то конкретное?"
             android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintHorizontal_bias="0.344"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TryItAllAttention" />
 
@@ -126,7 +126,7 @@
             android:background="#000000"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.102"
+            app:layout_constraintHorizontal_bias="0.115"
             app:layout_constraintStart_toStartOf="parent"
 
 
@@ -173,7 +173,7 @@
             android:background="#000000"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.441"
+            app:layout_constraintHorizontal_bias="0.477"
 
             app:layout_constraintStart_toEndOf="@+id/ComfortableCompanyAttention"
             app:layout_constraintTop_toBottomOf="@+id/TryItAllAttention"
@@ -270,6 +270,7 @@
             android:scaleType="centerCrop"
             app:layout_anchorGravity="center"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.442"
             app:layout_constraintStart_toEndOf="@+id/PartyAttention"
             app:layout_constraintTop_toBottomOf="@+id/SportVacationAttention"
             app:shapeAppearanceOverlay="@style/circular"
@@ -310,8 +311,8 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/OtherAttention"
-            android:layout_width="332dp"
-            android:layout_height="133dp"
+            android:layout_width="327dp"
+            android:layout_height="160dp"
             android:layout_marginTop="64dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ignacio_brosa_vjdbpuxus_s_unsplash"
@@ -353,21 +354,20 @@
 
         <TextView
             android:id="@+id/textView17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="347dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="10dp"
-            android:background="#181D3A"
+            android:background="#222222"
             android:fontFamily="@font/montserrat_extrabold"
             android:text="Найди еще больше событий по душе"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/OtherAttention"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.203"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/PartyAttention"
-            app:layout_constraintVertical_bias="0.411" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/textView28"

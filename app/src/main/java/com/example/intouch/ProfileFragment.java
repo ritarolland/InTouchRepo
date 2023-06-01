@@ -26,8 +26,6 @@ public class ProfileFragment extends Fragment {
 
 
         binding = FragmentProfileBinding.inflate(inflater, container, false);
-
-
         binding.textViewemail.setText(Html.fromHtml("<a href = \"mailto:megatroxx@mail.ru\"> Send Feedback </a>"));
         binding.textViewemail.setMovementMethod(LinkMovementMethod.getInstance());
 

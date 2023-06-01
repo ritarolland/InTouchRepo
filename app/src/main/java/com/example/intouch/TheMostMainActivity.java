@@ -132,6 +132,7 @@ public class TheMostMainActivity extends AppCompatActivity {
 //
 //            }
 //        });
+
         AddLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -140,20 +141,20 @@ public class TheMostMainActivity extends AppCompatActivity {
 //                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, AddFragment.class, null).commit();
 
                     HomeText.setVisibility(View.GONE);
-//                    NotificationText.setVisibility(View.GONE);
+
                     ChatText.setVisibility(View.GONE);
                     ProfileText.setVisibility(View.GONE);
 
 
                     HomeImage.setImageResource(R.drawable.homeicon_selected);
-//                    NotificationImage.setImageResource(R.drawable.notificationicon_selected);
+    //                NotificationImage.setImageResource(R.drawable.notificationicon_selected);
                     ChatImage.setImageResource(R.drawable.messages_question_selected);
                     ProfileImage.setImageResource(R.drawable.user_selected);
 
 
 
                     HomeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-//                    NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+      //              NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     ChatLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     ProfileLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 

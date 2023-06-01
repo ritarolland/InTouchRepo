@@ -190,13 +190,13 @@
             android:id="@+id/textView"
             android:layout_width="143dp"
             android:layout_height="23dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="56dp"
             android:text="Мои события"
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageView24"
+            app:layout_constraintEnd_toEndOf="@+id/imageView26"
             app:layout_constraintTop_toTopOf="@+id/imageView26" />
 
         <ImageView
@@ -209,38 +209,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView24"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="24dp"
-            android:src="@drawable/online_conference"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView26"
-            app:layout_constraintStart_toStartOf="@+id/imageView26" />
-
-        <ImageView
-            android:id="@+id/imageView29"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/feedback"
-            app:layout_constraintBottom_toBottomOf="@+id/TextViewEmail"
-            app:layout_constraintStart_toStartOf="@+id/TextViewEmail" />
-
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="56dp"
+            android:layout_marginEnd="96dp"
+            android:layout_marginBottom="48dp"
             android:text="Поддержка"
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/TextViewEmail"
-            app:layout_constraintStart_toEndOf="@+id/imageView29" />
+            app:layout_constraintEnd_toEndOf="@+id/TextViewEmail" />
 
         <TextView
             android:id="@+id/textViewemail"
@@ -252,7 +232,7 @@
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintBottom_toBottomOf="@+id/TextViewEmail"
-            app:layout_constraintStart_toEndOf="@+id/imageView29"
+            app:layout_constraintStart_toEndOf="@+id/imageView13"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:layout_constraintVertical_bias="0.2" />
 
@@ -274,17 +254,37 @@
 
         <TextView
             android:id="@+id/textView27"
-            android:layout_width="178dp"
-            android:layout_height="40dp"
+            android:layout_width="190dp"
+            android:layout_height="39dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
             android:text="Сколько компаний уже собрали?"
             android:textColor="#000000"
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="@+id/imageView26"
-            app:layout_constraintHorizontal_bias="0.457"
-            app:layout_constraintStart_toEndOf="@+id/imageView24"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/customer_support"
+            app:layout_constraintBottom_toBottomOf="@+id/TextViewEmail"
+            app:layout_constraintStart_toStartOf="@+id/TextViewEmail" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/calendar"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView26"
+            app:layout_constraintStart_toStartOf="@+id/imageView26"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
