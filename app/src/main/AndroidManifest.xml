@@ -13,6 +13,20 @@
         android:theme="@style/Theme.InTouch"
         tools:targetApi="31">
         <activity
+            android:name=".activities.OneEventActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.EventsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.ChatActivity"
             android:exported="false">
             <meta-data
@@ -55,6 +69,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -76,8 +91,6 @@
         <activity
             android:name=".TheMostMainActivity"
             android:exported="false">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

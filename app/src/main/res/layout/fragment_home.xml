@@ -59,7 +59,7 @@
             tools:ignore="TextContrastCheck" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageButton"
+            android:id="@+id/try_all_button"
             android:layout_width="330dp"
             android:layout_height="159dp"
             android:layout_marginTop="20dp"
@@ -84,11 +84,11 @@
             android:text="Попробуй все"
             android:textColor="#FFFFFF"
             android:textSize="32sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton"
+            app:layout_constraintBottom_toBottomOf="@+id/try_all_button"
+            app:layout_constraintEnd_toEndOf="@+id/try_all_button"
             app:layout_constraintHorizontal_bias="0.126"
-            app:layout_constraintStart_toStartOf="@+id/imageButton"
-            app:layout_constraintTop_toTopOf="@+id/imageButton"
+            app:layout_constraintStart_toStartOf="@+id/try_all_button"
+            app:layout_constraintTop_toTopOf="@+id/try_all_button"
             app:layout_constraintVertical_bias="0.406" />
 
         <TextView
@@ -98,7 +98,7 @@
             android:text="Все актуальные события"
             android:textColor="#BFB8B8"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+            app:layout_constraintBottom_toBottomOf="@+id/try_all_button"
             app:layout_constraintEnd_toEndOf="@+id/textView2"
             app:layout_constraintHorizontal_bias="0.185"
             app:layout_constraintStart_toStartOf="@+id/textView2" />
@@ -116,10 +116,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.069"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+            app:layout_constraintTop_toBottomOf="@+id/try_all_button" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageButton2"
+            android:id="@+id/cosy_company_button"
             android:layout_width="150sp"
             android:layout_height="200sp"
             android:layout_marginTop="56dp"
@@ -133,7 +133,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.102"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton"
+            app:layout_constraintTop_toBottomOf="@+id/try_all_button"
             app:srcCompat="@drawable/comfcompany"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -147,10 +147,10 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_anchorGravity="top|center"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton2"
+            app:layout_constraintBottom_toBottomOf="@+id/cosy_company_button"
+            app:layout_constraintEnd_toEndOf="@+id/cosy_company_button"
             app:layout_constraintHorizontal_bias="0.214"
-            app:layout_constraintStart_toStartOf="@+id/imageButton2" />
+            app:layout_constraintStart_toStartOf="@+id/cosy_company_button" />
 
         <TextView
             android:layout_width="132dp"
@@ -166,7 +166,7 @@
             app:layout_constraintTop_toBottomOf="@+id/company" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageButton3"
+            android:id="@+id/sports_button"
             android:layout_width="150dp"
             android:layout_height="200dp"
             android:layout_marginTop="56dp"
@@ -177,8 +177,8 @@
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.441"
-            app:layout_constraintStart_toEndOf="@+id/imageButton2"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton"
+            app:layout_constraintStart_toEndOf="@+id/cosy_company_button"
+            app:layout_constraintTop_toBottomOf="@+id/try_all_button"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/photo_1522040942177_269680274214"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -192,10 +192,10 @@
             android:text="@string/Vocation"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton3"
+            app:layout_constraintEnd_toEndOf="@+id/sports_button"
             app:layout_constraintHorizontal_bias="0.391"
-            app:layout_constraintStart_toStartOf="@+id/imageButton3"
-            app:layout_constraintTop_toTopOf="@+id/imageButton3" />
+            app:layout_constraintStart_toStartOf="@+id/sports_button"
+            app:layout_constraintTop_toTopOf="@+id/sports_button" />
 
         <TextView
             android:id="@+id/textView12"
@@ -212,7 +212,7 @@
             app:layout_constraintTop_toBottomOf="@+id/vocation" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageButton4"
+            android:id="@+id/party_button"
             android:layout_width="150dp"
             android:layout_height="200dp"
             android:layout_marginStart="25dp"
@@ -226,7 +226,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+            app:layout_constraintTop_toBottomOf="@+id/cosy_company_button"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/aleksandr_popov_3_kh6xsu9xq_unsplash"
             app:strokeColor="#FFFFFF"
@@ -243,10 +243,10 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_anchorGravity="top|center"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton4"
+            app:layout_constraintBottom_toBottomOf="@+id/party_button"
+            app:layout_constraintEnd_toEndOf="@+id/party_button"
             app:layout_constraintHorizontal_bias="0.228"
-            app:layout_constraintStart_toStartOf="@+id/imageButton4" />
+            app:layout_constraintStart_toStartOf="@+id/party_button" />
 
         <TextView
             android:layout_width="138dp"
@@ -262,7 +262,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageButton5"
+            android:id="@+id/culture_button"
             android:layout_width="150dp"
             android:layout_height="200dp"
             android:layout_marginTop="16dp"
@@ -271,8 +271,8 @@
             app:layout_anchorGravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.441"
-            app:layout_constraintStart_toEndOf="@+id/imageButton4"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+            app:layout_constraintStart_toEndOf="@+id/party_button"
+            app:layout_constraintTop_toBottomOf="@+id/sports_button"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/photo_1524014482380_0988169f598d"
             app:strokeColor="#FFFFFF"
@@ -290,9 +290,9 @@
             android:textSize="20sp"
             app:layout_anchor="@+id/textView11"
             app:layout_anchorGravity="top|center"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton5"
+            app:layout_constraintEnd_toEndOf="@+id/culture_button"
             app:layout_constraintHorizontal_bias="0.392"
-            app:layout_constraintStart_toStartOf="@+id/imageButton5"
+            app:layout_constraintStart_toStartOf="@+id/culture_button"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
         <TextView
@@ -310,7 +310,7 @@
             app:layout_constraintTop_toBottomOf="@+id/inflate" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageView"
+            android:id="@+id/other_button"
             android:layout_width="313dp"
             android:layout_height="140dp"
             android:layout_marginTop="64dp"
@@ -319,7 +319,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.437"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+            app:layout_constraintTop_toBottomOf="@+id/culture_button"
             app:shapeAppearanceOverlay="@style/circular"
             app:strokeColor="#FFFFFF"
             app:strokeWidth="3dp" />
@@ -333,10 +333,10 @@
             android:text="Другое"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/other_button"
             app:layout_constraintHorizontal_bias="0.068"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
+            app:layout_constraintStart_toStartOf="@+id/other_button"
+            app:layout_constraintTop_toTopOf="@+id/other_button" />
 
         <TextView
             android:id="@+id/textView16"
@@ -363,11 +363,11 @@
             android:text="Найди еще больше событий по душе"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintBottom_toTopOf="@+id/other_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.088"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+            app:layout_constraintTop_toBottomOf="@+id/party_button"
             app:layout_constraintVertical_bias="0.09" />
 
 

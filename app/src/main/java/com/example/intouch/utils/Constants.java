@@ -20,5 +20,8 @@ public class Constants {
     public static final String KEY_RECEIVER_NAME = "receiverName";
     public static final String KEY_LAST_MESSAGE = "lastMessage";
     public static final String KEY_FRAGMENT_TAG = "FRAGMENT_TAG";
+    public static final String KEY_COLLECTION_EVENTS = "Events";
+    public static final String KEY_EVENT = "Event";
+    public static final String KEY_MEMBERS = "members";
 
 }
