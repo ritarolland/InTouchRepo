@@ -5,9 +5,9 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.SwitchCompat;
 
 import android.app.TimePickerDialog;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,18 +16,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import com.example.intouch.databinding.ActivityAddEventBinding;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.android.material.slider.RangeSlider;
-import com.google.android.material.slider.Slider;
 
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 public class AddEventActivity extends AppCompatActivity {
+
+
 
     AppCompatButton WomanButton;
     AppCompatButton OnlyMenButtonAttention;
@@ -69,7 +70,7 @@ public class AddEventActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        stepSlider = findViewById(R.id.RangeSlider);
+        stepSlider = findViewById(R.id.RangeSlider);  //here
         Switch = (SwitchCompat) findViewById(R.id.Switch);
         ToPeopleNumberAttention = (EditText) findViewById(R.id.ToPeopleNumberAttention);
 
@@ -138,6 +139,29 @@ public class AddEventActivity extends AppCompatActivity {
 
             }
         });
+
+
+                RangeSlider rangeSlider = findViewById(R.id.RangeSlider);
+                TextView textViewStart = findViewById(R.id.textViewStart);
+
+                rangeSlider.addOnSliderTouchListener(new RangeSlider.OnSliderTouchListener() {
+                    @Override
+                    public void onStartTrackingTouch(RangeSlider slider) {
+                        List<Float> values = slider.getValues();
+                    }
+
+                    @Override
+                    public void onStopTrackingTouch(RangeSlider slider) {
+                        List<Float> values = slider.getValues();
+                        textViewStart.setText((Math.round(values.get(0))) + " " + Math.round(values.get(1)));
+                    }
+
+                    public void onStopTracking(RangeSlider slider) {
+                        List<Float> values = slider.getValues();
+                        textViewStart.setText((Math.round(values.get(0))) + " " + Math.round(values.get(1)));
+                    }
+                });
+
 
 
 
