@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#000000"
+    android:background="#8AC2DC"
     tools:context=".AddEventActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,22 +14,24 @@
         android:background="#FFFFFF"
         tools:context=".AddEventActivity">
 
+
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="256dp"
-            android:layout_height="244dp"
-            android:layout_marginEnd="104dp"
-            android:src="@drawable/monitoring"
+            android:layout_width="390dp"
+            android:layout_height="188dp"
+            android:layout_marginEnd="3dp"
+            android:src="@drawable/top_for_one_event"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.021" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/CreateEventsText"
             android:layout_width="196dp"
             android:layout_height="94dp"
-            android:layout_marginStart="160dp"
+            android:layout_marginStart="140dp"
             android:background="@drawable/white_button"
             android:elevation="20dp"
             android:fontFamily="@font/inter_black"
@@ -41,13 +43,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/imageView8"
             app:layout_constraintTop_toTopOf="@+id/imageView8"
-            app:layout_constraintVertical_bias="0.026" />
+            app:layout_constraintVertical_bias="0.007" />
 
         <TextView
             android:id="@+id/CollectFriendsText"
             android:layout_width="196dp"
             android:layout_height="94dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/blackbutton"
             android:elevation="20dp"
             android:fontFamily="@font/inter_black"
@@ -57,7 +59,7 @@
 
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.208"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CreateEventsText" />
 
@@ -110,7 +112,10 @@
                 android:id="@+id/CategoryAttention"
                 android:layout_width="308dp"
                 android:layout_height="53dp"
-                android:inputType="none">
+                android:inputType="none"
+                android:background="@drawable/white_with_shadow_background"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="441dp">
 
             </AutoCompleteTextView>
 
@@ -136,25 +141,25 @@
             android:id="@+id/WhichPeopleCanComeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="24dp"
             android:fontFamily="@font/inter_bold"
             android:text="Кого вы хотели бы видеть?"
             android:textColor="#000000"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.247"
+            app:layout_constraintHorizontal_bias="0.179"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/SelectTime" />
+            app:layout_constraintTop_toBottomOf="@+id/Switch" />
 
         <ImageButton
             android:id="@+id/WomanWithMapImage"
             android:layout_width="199dp"
             android:layout_height="195dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="136dp"
-            android:background="@drawable/white_button"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="156dp"
+            android:background="@drawable/white_button_ligitblue_stroke"
             android:scaleType="centerCrop"
-            android:src="@drawable/travel"
+            android:src="@drawable/woman_with_flowers"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/WhichPeopleCanComeText" />
 
@@ -163,7 +168,7 @@
             android:layout_width="170dp"
             android:layout_height="73dp"
             android:layout_marginTop="36dp"
-            android:background="@drawable/white_with_blacklines"
+            android:background="@drawable/white_button_ligitblue_stroke"
             android:elevation="20dp"
             android:fontFamily="@font/inter_semibold"
             android:gravity="center"
@@ -181,7 +186,7 @@
             android:layout_width="195dp"
             android:layout_height="191dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/white_button"
+            android:background="@drawable/white_button_ligitblue_stroke"
             android:scaleType="centerCrop"
             android:src="@drawable/cinema"
             app:layout_constraintEnd_toEndOf="parent"
@@ -195,7 +200,7 @@
             android:layout_height="73dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="112dp"
-            android:background="@drawable/white_with_orange"
+            android:background="@drawable/white_button_ligitblue_stroke"
             android:elevation="20dp"
             android:fontFamily="@font/inter_semibold"
             android:gravity="center"
@@ -213,10 +218,10 @@
             android:layout_width="195dp"
             android:layout_height="191dp"
             android:layout_marginTop="96dp"
-            android:background="@drawable/white_button"
+            android:background="@drawable/white_button_ligitblue_stroke"
 
             android:scaleType="centerCrop"
-            android:src="@drawable/cooking"
+            android:src="@drawable/camping_picture"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.101"
             app:layout_constraintStart_toStartOf="parent"
@@ -227,7 +232,7 @@
             android:layout_width="170dp"
             android:layout_height="73dp"
             android:layout_marginTop="28dp"
-            android:background="@drawable/white_with_greenlines"
+            android:background="@drawable/white_button_ligitblue_stroke"
             android:elevation="20dp"
             android:fontFamily="@font/inter_semibold"
             android:gravity="center"
@@ -246,7 +251,8 @@
             android:layout_width="160dp"
             android:layout_height="67dp"
             android:layout_marginTop="28dp"
-            android:background="@drawable/newblack"
+            android:theme="@style/datepicker"
+            android:background="@drawable/lightblue_for_all"
             android:elevation="150dp"
             android:text="Дата события"
             android:textColor="#FFFFFF"
@@ -260,8 +266,8 @@
             android:id="@+id/justlinetext"
             android:layout_width="157dp"
             android:layout_height="52dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/white_button"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/white_with_shadow_background"
             android:elevation="10dp"
             android:fontFamily="@font/inter_bold"
             android:gravity="center"
@@ -269,17 +275,17 @@
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.629"
+            app:layout_constraintHorizontal_bias="0.388"
             app:layout_constraintStart_toEndOf="@+id/SelectDate"
             app:layout_constraintTop_toBottomOf="@+id/WhenMeetingWillBeText" />
 
         <TextView
             android:id="@+id/justlinetext2"
-            android:layout_width="117dp"
-            android:layout_height="54dp"
+            android:layout_width="133dp"
+            android:layout_height="56dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="44dp"
-            android:background="@drawable/white_button"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/white_with_shadow_background"
             android:elevation="10dp"
             android:fontFamily="@font/inter_bold"
             android:gravity="center"
@@ -287,7 +293,7 @@
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.268"
+            app:layout_constraintHorizontal_bias="0.039"
             app:layout_constraintStart_toEndOf="@+id/SelectTime"
             app:layout_constraintTop_toBottomOf="@+id/justlinetext" />
 
@@ -296,7 +302,7 @@
             android:layout_width="157dp"
             android:layout_height="67dp"
             android:layout_marginTop="24dp"
-            android:background="@drawable/newblack"
+            android:background="@drawable/lightblue_for_all"
             android:text="Время события"
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
@@ -310,15 +316,19 @@
             android:layout_width="311dp"
             android:layout_height="52dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:paddingTop="30dp"
             android:stepSize="1.0"
             android:valueFrom="12"
-            android:valueTo="80"
+            android:valueTo="70"
+            app:haloColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/AgeText"
+            app:thumbColor="#000000"
+            app:tickColor="#000000"
+            app:trackColor="#FFFFFF"
             app:values="@array/rangeSlider" />
 
         <TextView
@@ -346,13 +356,14 @@
             android:id="@+id/FromPeopleNumberAttention"
             android:layout_width="228dp"
             android:layout_height="43dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/drawarectangle"
             android:ems="10"
             android:gravity="center"
             android:hint="От"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/NumberPeopleText" />
 
@@ -360,16 +371,16 @@
             android:id="@+id/NumberPeopleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="28dp"
             android:fontFamily="@font/inter_bold"
             android:text="Количество участников"
-            android:textColor="#000000"
 
+            android:textColor="#000000"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintHorizontal_bias="0.176"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/RangeSlider" />
+            app:layout_constraintTop_toBottomOf="@+id/SelectTime" />
 
         <EditText
             android:id="@+id/ToPeopleNumberAttention"
@@ -395,7 +406,7 @@
             android:layout_width="342dp"
             android:layout_height="48dp"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="20dp"
             android:layout_marginBottom="24dp"
             android:checked="false"
             android:fontFamily="@font/inter_semibold"
@@ -405,14 +416,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ToPeopleNumberAttention"
-            app:layout_constraintVertical_bias="0.039" />
+            app:layout_constraintVertical_bias="0.011" />
 
         <EditText
             android:id="@+id/MoreInformationAttention"
             android:layout_width="269dp"
             android:layout_height="124dp"
-            android:layout_marginTop="80dp"
-            android:background="@drawable/white_with_grey"
+            android:layout_marginTop="104dp"
+            android:background="@drawable/white_with_shadow_background"
             android:ems="10"
             android:fontFamily="@font/montserrat"
             android:gravity="center"
@@ -420,28 +431,32 @@
             android:inputType="textMultiLine"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.411"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Switch" />
+            app:layout_constraintTop_toBottomOf="@+id/RangeSlider" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/CreateAnEventButton"
             android:layout_width="329dp"
             android:layout_height="72dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/blackbutton"
             android:text="Создать событие"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintHorizontal_bias="0.343"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/MoreInformationAttention" />
+            app:layout_constraintTop_toBottomOf="@+id/MoreInformationAttention"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/textView25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="36dp"
+            android:layout_marginBottom="16dp"
             android:fontFamily="@font/inter_bold"
             android:text="Осталось совсем немного"
             android:textColor="#000000"

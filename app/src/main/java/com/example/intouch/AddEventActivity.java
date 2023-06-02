@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.SwitchCompat;
 
+import android.app.AlertDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -114,6 +115,7 @@ public class AddEventActivity extends AppCompatActivity {
 
 
         binding.SelectDate.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 datePicker.show(getSupportFragmentManager(), "Material Get Picker");
@@ -132,6 +134,7 @@ public class AddEventActivity extends AppCompatActivity {
                 Calendar calendar = Calendar.getInstance();
                 jam = calendar.get(Calendar.HOUR_OF_DAY);
                 menit = calendar.get(Calendar.MINUTE);
+
 
                 TimePickerDialog dialog;
                 dialog = new TimePickerDialog(AddEventActivity.this, new TimePickerDialog.OnTimeSetListener() {
@@ -189,20 +192,20 @@ public class AddEventActivity extends AppCompatActivity {
     }
     public void ClickWoman(View view){
         WomanButton.setBackgroundResource(R.drawable.woman_backgroud);
-        OnlyMenButtonAttention.setBackgroundResource(R.drawable.white_with_orange);
-        AllButtonAttention.setBackgroundResource(R.drawable.white_with_greenlines);
+        OnlyMenButtonAttention.setBackgroundResource(R.drawable.white_button_ligitblue_stroke);
+        AllButtonAttention.setBackgroundResource(R.drawable.white_button_ligitblue_stroke);
 
     }
     public void ClickMan(View view){
-        OnlyMenButtonAttention.setBackgroundResource(R.drawable.man_background);
-        WomanButton.setBackgroundResource(R.drawable.white_with_blacklines);
-        AllButtonAttention.setBackgroundResource(R.drawable.white_with_greenlines);
+        OnlyMenButtonAttention.setBackgroundResource(R.drawable.woman_backgroud);
+        WomanButton.setBackgroundResource(R.drawable.white_button_ligitblue_stroke);
+        AllButtonAttention.setBackgroundResource(R.drawable.white_button_ligitblue_stroke);
 
     }
     public void ClickAll(View view){
-        WomanButton.setBackgroundResource(R.drawable.white_with_blacklines);
-        OnlyMenButtonAttention.setBackgroundResource(R.drawable.white_with_orange);
-        AllButtonAttention.setBackgroundResource(R.drawable.all_background);
+        WomanButton.setBackgroundResource(R.drawable.white_button_ligitblue_stroke);
+        OnlyMenButtonAttention.setBackgroundResource(R.drawable.white_button_ligitblue_stroke);
+        AllButtonAttention.setBackgroundResource(R.drawable.woman_backgroud);
 
     }
 
