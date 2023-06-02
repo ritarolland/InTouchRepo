@@ -1,5 +1,7 @@
 package com.example.intouch;
 
+import android.content.Intent;
+import android.content.pm.LabeledIntent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -28,6 +30,8 @@ public class ProfileFragment extends Fragment {
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         binding.textViewemail.setText(Html.fromHtml("<a href = \"mailto:megatroxx@mail.ru\"> Send Feedback </a>"));
         binding.textViewemail.setMovementMethod(LinkMovementMethod.getInstance());
+
+
 
         return binding.getRoot();
     }

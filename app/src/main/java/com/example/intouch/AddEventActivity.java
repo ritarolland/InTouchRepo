@@ -142,7 +142,7 @@ public class AddEventActivity extends AppCompatActivity {
 
 
                 RangeSlider rangeSlider = findViewById(R.id.RangeSlider);
-                TextView textViewStart = findViewById(R.id.textViewStart);
+//                TextView textViewStart = findViewById(R.id.textViewStart);
 
                 rangeSlider.addOnSliderTouchListener(new RangeSlider.OnSliderTouchListener() {
                     @Override
@@ -153,12 +153,12 @@ public class AddEventActivity extends AppCompatActivity {
                     @Override
                     public void onStopTrackingTouch(RangeSlider slider) {
                         List<Float> values = slider.getValues();
-                        textViewStart.setText((Math.round(values.get(0))) + " " + Math.round(values.get(1)));
+//                        textViewStart.setText((Math.round(values.get(0))) + " " + Math.round(values.get(1)));
                     }
 
                     public void onStopTracking(RangeSlider slider) {
                         List<Float> values = slider.getValues();
-                        textViewStart.setText((Math.round(values.get(0))) + " " + Math.round(values.get(1)));
+//                        textViewStart.setText((Math.round(values.get(0))) + " " + Math.round(values.get(1)));
                     }
                 });
 
