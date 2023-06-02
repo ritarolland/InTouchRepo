@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#101740"
+    android:background="#FFFFFF"
     tools:context=".HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#222222">
+        android:background="#FFFFFF">
 
 
         <ImageView
@@ -26,56 +26,38 @@
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/ellipseblue" />
 
+
         <TextView
             android:id="@+id/justlinetext"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="23dp"
+            android:background="@color/white"
+            android:fontFamily="@font/montserrat_semibold"
             android:text="InTouch"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.047"
+            app:layout_constraintHorizontal_bias="0.025"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/SearchEditText"
-            android:layout_width="334dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="76dp"
-
-            android:background="@drawable/drawarectangle"
-            android:elevation="20dp"
-            android:ems="10"
-
-            android:inputType="text"
-            android:text="   Поиск"
-            android:textColor="#7D7D7D"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.367"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/circular"
-            tools:ignore="TextContrastCheck" />
-
+            app:shapeAppearanceOverlay="@style/circular" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/TryItAllAttention"
             android:layout_width="324dp"
             android:layout_height="171dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="88dp"
             android:background="#000000"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.434"
+            app:layout_constraintHorizontal_bias="0.405"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/SearchEditText"
+            app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/_614716489_120_p_fon_dlya_afishi_diskoteki_127"
-            app:strokeColor="#FFFFFF"
-            app:strokeWidth="3dp"
+            app:strokeColor="#3CE9FF"
+            app:strokeWidth="5dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -108,15 +90,16 @@
             android:layout_width="303dp"
             android:layout_height="31dp"
             android:layout_marginTop="12dp"
-            android:background="#222222"
+            android:background="@color/white"
             android:fontFamily="@font/montserrat_extrabold"
             android:text="Ищешь что-то конкретное?"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.344"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TryItAllAttention" />
+            app:layout_constraintTop_toBottomOf="@+id/TryItAllAttention"
+            app:shapeAppearanceOverlay="@style/circular" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ComfortableCompanyAttention"
@@ -133,7 +116,7 @@
             app:layout_constraintTop_toBottomOf="@+id/TryItAllAttention"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/comfcompany"
-            app:strokeColor="#FFFFFF"
+            app:strokeColor="#3CE9FF"
             app:strokeWidth="3dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -179,7 +162,7 @@
             app:layout_constraintTop_toBottomOf="@+id/TryItAllAttention"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/photo_1522040942177_269680274214"
-            app:strokeColor="#FFFFFF"
+            app:strokeColor="#3CE9FF"
             app:strokeWidth="3dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -229,7 +212,7 @@
             app:layout_constraintTop_toBottomOf="@+id/ComfortableCompanyAttention"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/aleksandr_popov_3_kh6xsu9xq_unsplash"
-            app:strokeColor="#FFFFFF"
+            app:strokeColor="#3CE9FF"
             app:strokeWidth="3dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -275,7 +258,7 @@
             app:layout_constraintTop_toBottomOf="@+id/SportVacationAttention"
             app:shapeAppearanceOverlay="@style/circular"
             app:srcCompat="@drawable/photo_1524014482380_0988169f598d"
-            app:strokeColor="#FFFFFF"
+            app:strokeColor="#3CE9FF"
             app:strokeWidth="3dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -321,7 +304,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CultureAttention"
             app:shapeAppearanceOverlay="@style/circular"
-            app:strokeColor="#FFFFFF"
+            app:strokeColor="#3CE9FF"
             app:strokeWidth="3dp" />
 
         <TextView
@@ -355,19 +338,20 @@
         <TextView
             android:id="@+id/textView17"
             android:layout_width="347dp"
-            android:layout_height="35dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="10dp"
-            android:background="#222222"
+            android:background="@color/white"
             android:fontFamily="@font/montserrat_extrabold"
             android:text="Найди еще больше событий по душе"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:textColor="#000000"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/OtherAttention"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/PartyAttention"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="1.0"
+            app:shapeAppearanceOverlay="@style/circular" />
 
         <TextView
             android:id="@+id/textView28"

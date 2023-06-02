@@ -172,7 +172,7 @@ public class TheMostMainActivity extends AppCompatActivity {
                     selectedTab = 2;
 
 //                    Intent intent = new Intent(TheMostMainActivity.this, AddEventActivity.class);
-                    Intent intent = new Intent(TheMostMainActivity.this, OneEventActivity.class);
+                    Intent intent = new Intent(TheMostMainActivity.this, AddEventActivity.class);
                     startActivity(intent);
 
 

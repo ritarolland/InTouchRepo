@@ -5,6 +5,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.SwitchCompat;
 
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
@@ -31,11 +32,15 @@ public class AddEventActivity extends AppCompatActivity {
 
 
     AppCompatButton WomanButton;
+
+
     AppCompatButton OnlyMenButtonAttention;
     AppCompatButton AllButtonAttention;
     AppCompatButton SelectDate;
 
     int counter = 1;
+
+    public int y = 9;
     EditText ToPeopleNumberAttention;
 
     SwitchCompat Switch;
@@ -47,6 +52,7 @@ public class AddEventActivity extends AppCompatActivity {
     TextView text;
 
     Button SelectTime;
+
 
     TextView Text2;
     String[] item = {"Комфорт", "Спорт", "Вечеринки", "Саморазвитие", "Другое"};
@@ -69,6 +75,14 @@ public class AddEventActivity extends AppCompatActivity {
         binding = ActivityAddEventBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
+//
+//
+//
+//        int tumbler = 1;
+//        Intent myIntent = new Intent(AddEventActivity.this, OneEventActivity.class);
+//        myIntent.putExtra("tumbler", tumbler);
+//        startActivity(myIntent);
 
         stepSlider = findViewById(R.id.RangeSlider);  //here
         Switch = (SwitchCompat) findViewById(R.id.Switch);
