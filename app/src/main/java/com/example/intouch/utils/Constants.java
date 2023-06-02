@@ -23,5 +23,6 @@ public class Constants {
     public static final String KEY_COLLECTION_EVENTS = "Events";
     public static final String KEY_EVENT = "Event";
     public static final String KEY_MEMBERS = "members";
+    public static final String KEY_PROFILE_IMAGE = "profileImage";
 
 }

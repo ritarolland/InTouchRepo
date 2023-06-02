@@ -6,12 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <ImageView
+
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/avatar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        app:riv_oval="true"
         android:background="@drawable/logo"/>
     <TextView
         android:id="@+id/name"

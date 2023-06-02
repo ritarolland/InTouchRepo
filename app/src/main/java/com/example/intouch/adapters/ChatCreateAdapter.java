@@ -1,5 +1,8 @@
 package com.example.intouch.adapters;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -17,6 +20,10 @@ public class ChatCreateAdapter extends RecyclerView.Adapter<ChatCreateAdapter.Vi
     private final List<User> users;
     private final UserListener userListener;
 
+    private Bitmap getProfileImage(String encodedImage) {
+        byte[] bytes = Base64.decode(encodedImage, Base64.DEFAULT);
+        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+    }
 
     public ChatCreateAdapter(List<User> users, UserListener userListener) {
         this.users = users;
@@ -50,6 +57,7 @@ public class ChatCreateAdapter extends RecyclerView.Adapter<ChatCreateAdapter.Vi
         void setUserData(User user) {
             binding.avatar.setImageResource(user.getAvatar());
             binding.name.setText(user.getUserName());
+            binding.avatar.setImageBitmap(getProfileImage(user.profileImage));
             binding.getRoot().setOnClickListener(v -> userListener.onUserClick(user));
         }
 

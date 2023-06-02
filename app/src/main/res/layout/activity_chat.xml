@@ -4,15 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
     tools:context=".activities.ChatActivity">
 
-    <Button
+    <ImageButton
         android:id="@+id/button_back"
-        android:layout_width="40dp"
+        android:layout_width="50dp"
         android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/back_button"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"/>
+
 
     <TextView
         android:id="@+id/friend_name"
@@ -29,13 +33,13 @@
         android:id="@+id/chat_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         app:stackFromEnd="true"
         android:layout_marginBottom="10dp"
 
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/ed_chat_input"
-        app:layout_constraintTop_toBottomOf="@+id/friend_name" />
+        app:layout_constraintTop_toBottomOf="@+id/button_back" />
 
     <EditText
         android:id="@+id/ed_chat_input"
@@ -44,6 +48,9 @@
         android:layout_marginBottom="10dp"
         android:layout_marginStart="10dp"
         android:hint="@string/enter_message"
+        android:background="@drawable/white_button"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,12 +58,22 @@
         />
     <FrameLayout
         android:id="@+id/frame_input_button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="8dp"
         android:background = "@drawable/logo"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="8dp"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="3dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_outline_send_24"/>
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,8 @@
 package com.example.intouch.adapters;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -18,6 +21,11 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     public static final int VIEW_TYPE_SENT = 1;
     public static final int VIEW_TYPE_RECEIVED = 2;
+
+    private Bitmap getProfileImage(String encodedImage) {
+        byte[] bytes = Base64.decode(encodedImage, Base64.DEFAULT);
+        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+    }
 
     public ChatAdapter(List<ChatMessage> chatMessages, String senderId) {
         this.chatMessages = chatMessages;
@@ -85,6 +93,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         void setData(ChatMessage chatMessage) {
             binding.message.setText(chatMessage.getMessage());
             binding.dataTime.setText(chatMessage.getDateTime());
+
         }
 
     }

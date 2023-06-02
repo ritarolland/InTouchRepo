@@ -66,8 +66,9 @@ public class ChatCreateActivity extends AppCompatActivity implements UserListene
                         String password = childSnapshot.child(Constants.KEY_USER_PASSWORD).getValue().toString();
                         String name = childSnapshot.child(Constants.KEY_USER_NAME).getValue().toString();
                         String id = childSnapshot.getKey();
-
-                        users.add(new User(id, email, password, name));
+                        User newUser = new User(id, email, password, name);
+                        newUser.profileImage = childSnapshot.child(Constants.KEY_PROFILE_IMAGE).getValue(String.class);
+                        users.add(newUser);
 
                     }
 

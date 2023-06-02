@@ -7,9 +7,10 @@ import java.io.Serializable;
 public class User implements Serializable {
 
 
-    private String userEmail, userPassword, userName, id;
+    public String userEmail, userPassword, userName, id;
     private int avatar = R.drawable.logo;
     private boolean sex = true;
+    public String profileImage = null;
 
     public User(){};
 

@@ -31,4 +31,8 @@
 
     <string name="name_hint">Name</string>
     <string name="enter_message">Enter message</string>
+    <string name="EventDescription">Расскажите больше о Вашем событии</string>
+    <string name="male">male</string>
+    <string name="female">female</string>
+    <string name="add_image">Add Image</string>
 </resources>

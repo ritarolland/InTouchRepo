@@ -16,9 +16,9 @@ import android.window.SplashScreen;
 
 public class TheMostMainActivity extends AppCompatActivity {
 
-    private LinearLayout HomeLayout, NotificationLayout, AddLayout, ChatLayout, ProfileLayout;
-    private ImageView HomeImage, NotificationImage, AddImage, ChatImage, ProfileImage;
-    private TextView HomeText, NotificationText, AddText, ChatText, ProfileText;
+    private LinearLayout HomeLayout, AddLayout, ChatLayout, ProfileLayout;
+    private ImageView HomeImage, AddImage, ChatImage, ProfileImage;
+    private TextView HomeText, AddText, ChatText, ProfileText;
 
     private int selectedTab = 1;
 
@@ -33,19 +33,16 @@ public class TheMostMainActivity extends AppCompatActivity {
     }
     private void init() {
         HomeLayout = findViewById(R.id.HomeLayout);
-        NotificationLayout = findViewById(R.id.NotificationLayout);
         AddLayout = findViewById(R.id.AddLayout);
         ChatLayout = findViewById(R.id.ChatLayout);
         ProfileLayout = findViewById(R.id.ProfileLayout);
 
         HomeImage = findViewById(R.id.HomeImage);
-        NotificationImage = findViewById(R.id.NotificationImage);
         AddImage = findViewById(R.id.AddImage);
         ChatImage = findViewById(R.id.ChatImage);
         ProfileImage = findViewById(R.id.ProfileImage);
 
         HomeText = findViewById(R.id.HomeText);
-        NotificationText = findViewById(R.id.NotificationText);
         AddText = findViewById(R.id.AddText);
         ChatText = findViewById(R.id.ChatText);
         ProfileText = findViewById(R.id.ProfileText);
@@ -56,7 +53,6 @@ public class TheMostMainActivity extends AppCompatActivity {
             if(selectedTab != 4) onClickMessenger();
         });
         HomeLayout.setOnClickListener(v -> onClickHome());
-        NotificationLayout.setOnClickListener(v -> onClickNotification());
         ProfileLayout.setOnClickListener(v -> onClickProfile());
         AddLayout.setOnClickListener(v -> onClickAdd());
 
@@ -67,20 +63,17 @@ public class TheMostMainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, ChatFragment.class, null).commit();
 
         HomeText.setVisibility(View.GONE);
-        NotificationText.setVisibility(View.GONE);
         AddText.setVisibility(View.GONE);
         ProfileText.setVisibility(View.GONE);
 
 
         HomeImage.setImageResource(R.drawable.homeicon);
-        NotificationImage.setImageResource(R.drawable.notificationicon);
         AddImage.setImageResource(R.drawable.add);
         ProfileImage.setImageResource(R.drawable.user);
 
 
 
         HomeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-        NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
         AddLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
         ProfileLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
@@ -103,19 +96,16 @@ public class TheMostMainActivity extends AppCompatActivity {
         if (selectedTab != 1){
             getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, HomeFragment.class, null).commit();
 
-            NotificationText.setVisibility(View.GONE);
             AddText.setVisibility(View.GONE);
             ChatText.setVisibility(View.GONE);
             ProfileText.setVisibility(View.GONE);
 
 
-            NotificationImage.setImageResource(R.drawable.notificationicon);
             AddImage.setImageResource(R.drawable.add);
             ChatImage.setImageResource(R.drawable.messages_question);
             ProfileImage.setImageResource(R.drawable.user);
 
 
-            NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
             AddLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
             ChatLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
             ProfileLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -136,68 +126,24 @@ public class TheMostMainActivity extends AppCompatActivity {
         }
     }
 
-    public void onClickNotification() {
-        if (selectedTab != 2){
-
-            getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, NotificationFragment.class, null).commit();
-
-            HomeText.setVisibility(View.GONE);
-            AddText.setVisibility(View.GONE);
-            ChatText.setVisibility(View.GONE);
-            ProfileText.setVisibility(View.GONE);
-
-
-            HomeImage.setImageResource(R.drawable.homeicon);
-            AddImage.setImageResource(R.drawable.add);
-            ChatImage.setImageResource(R.drawable.messages_question);
-            ProfileImage.setImageResource(R.drawable.user);
-
-
-
-            HomeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-            AddLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-            ChatLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-            ProfileLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-
-
-
-            NotificationText.setVisibility(View.VISIBLE);
-            NotificationImage.setImageResource(R.drawable.notificationicon_selected);
-            NotificationLayout.setBackgroundResource(R.drawable.icons_round);
-
-            ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
-            scaleAnimation.setDuration(200);
-            scaleAnimation.setFillAfter(true);
-            NotificationLayout.startAnimation(scaleAnimation);
-
-            selectedTab = 2;
-
-        }
-    }
-
     public void onClickProfile() {
         if (selectedTab != 5){
             getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, ProfileFragment.class, null).commit();
 
             HomeText.setVisibility(View.GONE);
-            NotificationText.setVisibility(View.GONE);
             AddText.setVisibility(View.GONE);
             ChatText.setVisibility(View.GONE);
 
 
             HomeImage.setImageResource(R.drawable.homeicon);
-            NotificationImage.setImageResource(R.drawable.notificationicon);
             AddImage.setImageResource(R.drawable.add);
             ChatImage.setImageResource(R.drawable.messages_question);
 
 
 
             HomeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-            NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
             AddLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
             ChatLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-
-
 
             ProfileText.setVisibility(View.VISIBLE);
             ProfileImage.setImageResource(R.drawable.user_selected);
@@ -214,23 +160,20 @@ public class TheMostMainActivity extends AppCompatActivity {
 
     public void onClickAdd() {
         if (selectedTab != 3){
-//                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, AddFragment.class, null).commit();
+            //getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, AddFragment.class, null).commit();
 
             HomeText.setVisibility(View.GONE);
-            NotificationText.setVisibility(View.GONE);
             ChatText.setVisibility(View.GONE);
             ProfileText.setVisibility(View.GONE);
 
 
             HomeImage.setImageResource(R.drawable.homeicon);
-            NotificationImage.setImageResource(R.drawable.notificationicon);
             ChatImage.setImageResource(R.drawable.messages_question);
             ProfileImage.setImageResource(R.drawable.user );
 
 
 
             HomeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-            NotificationLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
             ChatLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
             ProfileLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
@@ -247,8 +190,7 @@ public class TheMostMainActivity extends AppCompatActivity {
 
             selectedTab = 3;
 
-            Intent intent = new Intent(TheMostMainActivity.this, WelcomeAddScreen.class);
-            startActivity(intent);
+            startActivity(new Intent(this, AddEventActivity.class));
 
 
         }

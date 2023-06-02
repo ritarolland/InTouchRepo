@@ -5,13 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/avatar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@drawable/logo"></ImageView>
+        app:riv_oval="true"
+        android:background="@drawable/logo"/>
     <TextView
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,6 +22,6 @@
         android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
         android:hint="UserName"
-        android:layout_marginEnd="30dp"></TextView>
+        android:layout_marginEnd="30dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
