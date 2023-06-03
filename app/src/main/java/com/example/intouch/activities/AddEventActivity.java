@@ -1,4 +1,4 @@
-package com.example.intouch;
+package com.example.intouch.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.example.intouch.activities.EventsActivity;
+import com.example.intouch.R;
 import com.example.intouch.databinding.ActivityAddEventBinding;
 import com.example.intouch.models.Event;
 import com.example.intouch.utils.Constants;

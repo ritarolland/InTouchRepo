@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.intouch.TheMostMainActivity;
 import com.example.intouch.adapters.ChatCreateAdapter;
 import com.example.intouch.databinding.ActivityChatCreateBinding;
 import com.example.intouch.listeners.UserListener;

@@ -10,16 +10,12 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Base64;
 
-import com.example.intouch.ChatFragment;
-import com.example.intouch.TheMostMainActivity;
 import com.example.intouch.adapters.ChatAdapter;
 import com.example.intouch.databinding.ActivityChatBinding;
 import com.example.intouch.models.ChatMessage;
 import com.example.intouch.models.User;
 import com.example.intouch.utils.Constants;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;

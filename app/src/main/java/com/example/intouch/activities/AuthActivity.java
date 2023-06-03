@@ -9,7 +9,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.intouch.TheMostMainActivity;
 import com.example.intouch.databinding.ActivityAuthBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;

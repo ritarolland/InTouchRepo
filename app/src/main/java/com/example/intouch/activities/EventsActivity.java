@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.intouch.TheMostMainActivity;
 import com.example.intouch.adapters.EventsAdapter;
 import com.example.intouch.databinding.ActivityEventsBinding;
 import com.example.intouch.listeners.EventTouchListener;

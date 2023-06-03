@@ -1,17 +1,20 @@
-package com.example.intouch;
+package com.example.intouch.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.window.SplashScreen;
+
+import com.example.intouch.fragments.ProfileFragment;
+import com.example.intouch.R;
+import com.example.intouch.fragments.ChatFragment;
+import com.example.intouch.fragments.HomeFragment;
 
 
 public class TheMostMainActivity extends AppCompatActivity {

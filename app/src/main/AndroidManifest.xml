@@ -64,23 +64,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddEventActivity"
+            android:name=".activities.AddEventActivity"
             android:exported="false" />
-        <activity
-            android:name=".AddEvent1"
-            android:exported="false" />
-        <activity
-            android:name=".ScrollingActivity"
-            android:exported="false"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/Theme.InTouch.NoActionBar" />
-        <activity
-            android:name=".Home"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
         <activity
             android:name=".activities.AuthActivity"
             android:exported="false">
@@ -96,14 +81,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".TheMostMainActivity"
+            android:name=".activities.TheMostMainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

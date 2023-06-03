@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TheMostMainActivity">
+    tools:context=".activities.TheMostMainActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/FragmentContainer"
         android:layout_above="@+id/BottomBar"
-        android:name="com.example.intouch.HomeFragment"
+        android:name="com.example.intouch.fragments.HomeFragment"
         tools:layout="@layout/fragment_home" />
 
 

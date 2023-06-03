@@ -1,4 +1,4 @@
-package com.example.intouch;
+package com.example.intouch.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.intouch.activities.EventsActivity;
+
 import com.example.intouch.databinding.FragmentHomeBinding;
 import com.example.intouch.utils.Constants;
 import com.google.firebase.database.FirebaseDatabase;

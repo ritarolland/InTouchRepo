@@ -16,7 +16,6 @@ import android.util.Base64;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.intouch.TheMostMainActivity;
 import com.example.intouch.databinding.ActivityRegisterBinding;
 import com.example.intouch.models.User;
 import com.example.intouch.utils.Constants;
