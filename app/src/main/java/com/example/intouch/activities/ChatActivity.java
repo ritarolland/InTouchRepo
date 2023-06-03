@@ -5,7 +5,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Base64;
 
 import com.example.intouch.ChatFragment;
 import com.example.intouch.TheMostMainActivity;
@@ -47,6 +50,7 @@ public class ChatActivity extends AppCompatActivity {
 
     private String conversionId = null;
     private String currentUserName;
+    private String currentUserImage;
 
 
     @Override
@@ -107,6 +111,11 @@ public class ChatActivity extends AppCompatActivity {
         });
     }
 
+    private Bitmap getProfileImage(String encodedImage) {
+        byte[] bytes = Base64.decode(encodedImage, Base64.DEFAULT);
+        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+    }
+
     private void init() {
         inTouchDatabase = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
@@ -114,7 +123,8 @@ public class ChatActivity extends AppCompatActivity {
         chatMessages = new ArrayList<>();
         chatAdapter = new ChatAdapter(
                 chatMessages,
-                mAuth.getCurrentUser().getUid().toString()
+                mAuth.getCurrentUser().getUid().toString(),
+                getProfileImage(receiverUser.profileImage)
         );
         activityChatBinding.chatRecyclerview.setAdapter(chatAdapter);
         expectedSenderId = mAuth.getCurrentUser().getUid().toString();
@@ -128,7 +138,7 @@ public class ChatActivity extends AppCompatActivity {
 
                         DataSnapshot dataSnapshot = task.getResult();
                         currentUserName = dataSnapshot.child(currentUserId).child(Constants.KEY_USER_NAME).getValue(String.class);
-
+                        currentUserImage = dataSnapshot.child(currentUserId).child(Constants.KEY_PROFILE_IMAGE).getValue(String.class);
 
                     }
                 });
@@ -150,7 +160,9 @@ public class ChatActivity extends AppCompatActivity {
             conversion.put(Constants.KEY_SENDER_ID, mAuth.getCurrentUser().getUid().toString());
             conversion.put(Constants.KEY_RECEIVER_ID, receiverUser.getId());
             conversion.put(Constants.KEY_SENDER_NAME, currentUserName);
+            conversion.put(Constants.KEY_SENDER_IMAGE, currentUserImage);
             conversion.put(Constants.KEY_RECEIVER_NAME, receiverUser.getUserName());
+            conversion.put(Constants.KEY_RECEIVER_IMAGE, receiverUser.profileImage);
             conversion.put(Constants.KEY_LAST_MESSAGE, activityChatBinding.edChatInput.getText().toString());
             conversion.put(Constants.KEY_TIMESTAMP, new Date());
             addConversion(conversion);

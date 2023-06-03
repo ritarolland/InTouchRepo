@@ -61,13 +61,15 @@ public class AddEventActivity extends AppCompatActivity {
         ageValues = new ArrayList<>();
     }
 
+    private void onClickBack() {
+        startActivity(new Intent(getApplicationContext(), TheMostMainActivity.class));
+    }
+
     private void setListeners() {
+        binding.buttonBack.setOnClickListener(v -> onClickBack());
         binding.buttonCreateEvent.setOnClickListener(v -> createEvent());
         binding.Switch.setOnClickListener(v -> clickSwitch());
         binding.timeSelectButton.setOnClickListener(v -> selectTime());
-//        binding.category.setOnItemClickListener((parent, view, position, id) -> {
-//            String Item = parent.getItemAtPosition(position).toString();
-//        });
         binding.SelectDate.setOnClickListener(v -> {
             datePicker.show(getSupportFragmentManager(), "Material Get Picker");
             datePicker.addOnPositiveButtonClickListener(selection -> binding.dateTextview.setText(datePicker.getHeaderText()));
@@ -76,7 +78,6 @@ public class AddEventActivity extends AppCompatActivity {
         binding.RangeSlider.addOnSliderTouchListener(new RangeSlider.OnSliderTouchListener() {
             @Override
             public void onStartTrackingTouch(@NonNull RangeSlider slider) {
-                //List<Float> values = slider.getValues();
 
             }
 

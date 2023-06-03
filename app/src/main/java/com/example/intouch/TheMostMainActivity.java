@@ -53,7 +53,9 @@ public class TheMostMainActivity extends AppCompatActivity {
             if(selectedTab != 4) onClickMessenger();
         });
         HomeLayout.setOnClickListener(v -> onClickHome());
-        ProfileLayout.setOnClickListener(v -> onClickProfile());
+        ProfileLayout.setOnClickListener(v -> {
+            if(selectedTab != 5) onClickProfile();
+        });
         AddLayout.setOnClickListener(v -> onClickAdd());
 
     }
@@ -127,35 +129,35 @@ public class TheMostMainActivity extends AppCompatActivity {
     }
 
     public void onClickProfile() {
-        if (selectedTab != 5){
-            getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, ProfileFragment.class, null).commit();
 
-            HomeText.setVisibility(View.GONE);
-            AddText.setVisibility(View.GONE);
-            ChatText.setVisibility(View.GONE);
+        getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.FragmentContainer, ProfileFragment.class, null).commit();
 
-
-            HomeImage.setImageResource(R.drawable.homeicon);
-            AddImage.setImageResource(R.drawable.add);
-            ChatImage.setImageResource(R.drawable.messages_question);
+        HomeText.setVisibility(View.GONE);
+        AddText.setVisibility(View.GONE);
+        ChatText.setVisibility(View.GONE);
 
 
+        HomeImage.setImageResource(R.drawable.homeicon);
+        AddImage.setImageResource(R.drawable.add);
+        ChatImage.setImageResource(R.drawable.messages_question);
 
-            HomeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-            AddLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-            ChatLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
-            ProfileText.setVisibility(View.VISIBLE);
-            ProfileImage.setImageResource(R.drawable.user_selected);
-            ProfileLayout.setBackgroundResource(R.drawable.icons_round);
 
-            ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
-            scaleAnimation.setDuration(200);
-            scaleAnimation.setFillAfter(true);
-            AddLayout.startAnimation(scaleAnimation);
+        HomeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+        AddLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+        ChatLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
-            selectedTab = 5;
-        }
+        ProfileText.setVisibility(View.VISIBLE);
+        ProfileImage.setImageResource(R.drawable.user_selected);
+        ProfileLayout.setBackgroundResource(R.drawable.icons_round);
+
+        ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+        scaleAnimation.setDuration(200);
+        scaleAnimation.setFillAfter(true);
+        AddLayout.startAnimation(scaleAnimation);
+
+        selectedTab = 5;
+
     }
 
     public void onClickAdd() {
@@ -202,6 +204,9 @@ public class TheMostMainActivity extends AppCompatActivity {
             switch (fragmentTag) {
                 case "Messenger":
                     onClickMessenger();
+                    break;
+                case "Profile":
+                    onClickProfile();
                     break;
                 default:
                     getSupportFragmentManager().beginTransaction().setReorderingAllowed(true)

@@ -1,5 +1,8 @@
 package com.example.intouch.adapters;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -17,6 +20,11 @@ public class RecentConversationsAdapter extends RecyclerView.Adapter<RecentConve
 
     private final List<ChatMessage> chatMessages;
     private final ConversionListener conversionListener;
+
+    private Bitmap getConversationImage(String encodedImage) {
+        byte[] bytes = Base64.decode(encodedImage, Base64.DEFAULT);
+        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+    }
 
     public RecentConversationsAdapter(List<ChatMessage> chatMessages, ConversionListener conversionListener) {
         this.chatMessages = chatMessages;
@@ -56,10 +64,12 @@ public class RecentConversationsAdapter extends RecyclerView.Adapter<RecentConve
         void setData(ChatMessage chatMessage) {
             binding.name.setText(chatMessage.getConversionName());
             binding.recentMessage.setText(chatMessage.getMessage());
+            binding.avatar.setImageBitmap(getConversationImage(chatMessage.conversationImage));
             binding.getRoot().setOnClickListener(v -> {
                 User user = new User();
                 user.setId(chatMessage.getConversionId());
                 user.setUserName(chatMessage.getConversionName());
+                user.profileImage = chatMessage.conversationImage;
                 conversionListener.onConversionClicked(user);
             });
         }

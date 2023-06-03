@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.intouch.activities.EventsActivity;
 import com.example.intouch.databinding.FragmentHomeBinding;
+import com.example.intouch.utils.Constants;
 import com.google.firebase.database.FirebaseDatabase;
 
 /**
@@ -80,10 +81,47 @@ public class HomeFragment extends Fragment {
 
     private void setListeners() {
         fragmentHomeBinding.tryAllButton.setOnClickListener(v -> allClicked());
+        fragmentHomeBinding.cosyCompanyButton.setOnClickListener(v -> comfortClicked());
+        fragmentHomeBinding.cultureButton.setOnClickListener(v -> selfDevClicked());
+        fragmentHomeBinding.partyButton.setOnClickListener(v -> partiesClicked());
+        fragmentHomeBinding.sportsButton.setOnClickListener(v -> sportsClicked());
+        fragmentHomeBinding.otherButton.setOnClickListener(v -> otherClicked());
     }
 
     private void allClicked() {
-        startActivity(new Intent(getActivity(), EventsActivity.class));
+        Intent intent = new Intent(getActivity(), EventsActivity.class);
+        intent.putExtra(Constants.KEY_SELECTED_CATEGORY, "Все");
+        startActivity(intent);
+    }
+
+    private void comfortClicked() {
+        Intent intent = new Intent(getActivity(), EventsActivity.class);
+        intent.putExtra(Constants.KEY_SELECTED_CATEGORY, "Комфорт");
+        startActivity(intent);
+    }
+
+    private void sportsClicked() {
+        Intent intent = new Intent(getActivity(), EventsActivity.class);
+        intent.putExtra(Constants.KEY_SELECTED_CATEGORY, "Спорт");
+        startActivity(intent);
+    }
+
+    private void partiesClicked() {
+        Intent intent = new Intent(getActivity(), EventsActivity.class);
+        intent.putExtra(Constants.KEY_SELECTED_CATEGORY, "Вечеринки");
+        startActivity(intent);
+    }
+
+    private void selfDevClicked() {
+        Intent intent = new Intent(getActivity(), EventsActivity.class);
+        intent.putExtra(Constants.KEY_SELECTED_CATEGORY, "Саморазвитие");
+        startActivity(intent);
+    }
+
+    private void otherClicked() {
+        Intent intent = new Intent(getActivity(), EventsActivity.class);
+        intent.putExtra(Constants.KEY_SELECTED_CATEGORY, "Другое");
+        startActivity(intent);
     }
 
 }

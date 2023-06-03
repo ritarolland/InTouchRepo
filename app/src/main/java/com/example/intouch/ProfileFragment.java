@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.intouch.activities.AuthActivity;
+import com.example.intouch.activities.MyEventsActivity;
 import com.example.intouch.databinding.FragmentProfileBinding;
 import com.example.intouch.models.User;
 import com.example.intouch.utils.Constants;
@@ -107,6 +108,7 @@ public class ProfileFragment extends Fragment {
 
     private void setListeners() {
         fragmentProfileBinding.buttonSignOut.setOnClickListener(v -> onClickSignOut());
+        fragmentProfileBinding.myEventsButton.setOnClickListener(v -> startActivity(new Intent(getActivity(), MyEventsActivity.class)));
     }
 
     private Bitmap getProfileImage(String encodedImage) {

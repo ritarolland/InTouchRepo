@@ -5,7 +5,7 @@ import java.util.Date;
 public class ChatMessage {
     private String senderId, receiverId, dateTime, message;
     private Date dateObject;
-    private String conversionId, conversionName;
+    public String conversionId, conversionName, conversationImage;
 
     public void setConversionId(String conversionId) {
         this.conversionId = conversionId;

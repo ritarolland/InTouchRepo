@@ -123,10 +123,13 @@ public class ChatFragment extends Fragment implements ConversionListener {
                     if(currentUserId.equals(currentSenderId)) {
                         chatMessage.setConversionName(snapshot.child(Constants.KEY_RECEIVER_NAME).getValue(String.class));
                         chatMessage.setConversionId(snapshot.child(Constants.KEY_RECEIVER_ID).getValue(String.class));
+                        chatMessage.conversationImage = snapshot.child(Constants.KEY_RECEIVER_IMAGE).getValue(String.class);
+
                     }
                     else {
                         chatMessage.setConversionName(snapshot.child(Constants.KEY_SENDER_NAME).getValue(String.class));
                         chatMessage.setConversionId(snapshot.child(Constants.KEY_SENDER_ID).getValue(String.class));
+                        chatMessage.conversationImage = snapshot.child(Constants.KEY_SENDER_IMAGE).getValue(String.class);
                     }
                     chatMessage.setMessage(snapshot.child(Constants.KEY_LAST_MESSAGE).getValue(String.class));
                     chatMessage.setDateObject(snapshot.child(Constants.KEY_TIMESTAMP).getValue(Date.class));

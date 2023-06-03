@@ -18,18 +18,16 @@ import java.util.List;
 public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<ChatMessage> chatMessages;
     private final String senderId;
+    private final Bitmap receiverProfileImage;
 
     public static final int VIEW_TYPE_SENT = 1;
     public static final int VIEW_TYPE_RECEIVED = 2;
 
-    private Bitmap getProfileImage(String encodedImage) {
-        byte[] bytes = Base64.decode(encodedImage, Base64.DEFAULT);
-        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-    }
 
-    public ChatAdapter(List<ChatMessage> chatMessages, String senderId) {
+    public ChatAdapter(List<ChatMessage> chatMessages, String senderId, Bitmap receiverProfileImage) {
         this.chatMessages = chatMessages;
         this.senderId = senderId;
+        this.receiverProfileImage = receiverProfileImage;
     }
 
     @NonNull
@@ -37,9 +35,11 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         if(viewType == VIEW_TYPE_SENT) {
-            return new SentMessageViewHolder(ItemContainerSentMessageBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
+            return new SentMessageViewHolder(ItemContainerSentMessageBinding
+                    .inflate(LayoutInflater.from(parent.getContext()), parent, false));
         } else {
-            return new ReceivedMessageHolder(ItemContainerResievedMessageBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
+            return new ReceivedMessageHolder(ItemContainerResievedMessageBinding
+                    .inflate(LayoutInflater.from(parent.getContext()), parent, false));
         }
     }
 
@@ -48,7 +48,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if(getItemViewType(position) == VIEW_TYPE_SENT) {
             ((SentMessageViewHolder) holder).setData(chatMessages.get(position));
         } else {
-            ((ReceivedMessageHolder) holder).setData(chatMessages.get(position));
+            ((ReceivedMessageHolder) holder).setData(chatMessages.get(position), receiverProfileImage);
         }
     }
 
@@ -90,10 +90,10 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             binding = itemContainerResievedMessageBinding;
         }
 
-        void setData(ChatMessage chatMessage) {
+        void setData(ChatMessage chatMessage, Bitmap receiverProfileImage) {
             binding.message.setText(chatMessage.getMessage());
             binding.dataTime.setText(chatMessage.getDateTime());
-
+            binding.receiverImage.setImageBitmap(receiverProfileImage);
         }
 
     }

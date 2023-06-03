@@ -11,6 +11,7 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:background="@drawable/logo"
+        app:riv_oval="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/message"/>
 

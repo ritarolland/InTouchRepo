@@ -24,5 +24,9 @@ public class Constants {
     public static final String KEY_EVENT = "Event";
     public static final String KEY_MEMBERS = "members";
     public static final String KEY_PROFILE_IMAGE = "profileImage";
+    public static final String KEY_SENDER_IMAGE = "senderImage";
+    public static final String KEY_RECEIVER_IMAGE = "receiverImage";
+    public static final String KEY_SELECTED_CATEGORY = "SELECTED_CATEGORY";
+    public static final String KEY_CREATOR_ID = "creatorId";
 
 }

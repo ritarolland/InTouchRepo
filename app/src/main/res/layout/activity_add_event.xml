@@ -4,32 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#000000"
+
     tools:context=".AddEventActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/welcomeImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_back"
         tools:context=".AddEventActivity">
+
+
+
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="256dp"
-            android:layout_height="244dp"
-            android:layout_marginEnd="120dp"
-            android:src="@drawable/monitoring"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_height="188dp"
+            android:src="@drawable/top_for_one_event"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.021" />
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/back_button_dark"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
         <TextView
             android:id="@+id/CreateEventsText"
             android:layout_width="196dp"
             android:layout_height="94dp"
-            android:layout_marginStart="160dp"
+            android:layout_marginStart="140dp"
             android:background="@drawable/white_button"
             android:elevation="20dp"
             android:fontFamily="@font/inter_black"
@@ -41,13 +56,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/imageView8"
             app:layout_constraintTop_toTopOf="@+id/imageView8"
-            app:layout_constraintVertical_bias="0.026" />
+            app:layout_constraintVertical_bias="0.007" />
 
         <TextView
             android:id="@+id/CollectFriendsText"
             android:layout_width="196dp"
             android:layout_height="94dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/blackbutton"
             android:elevation="20dp"
             android:fontFamily="@font/inter_black"
@@ -57,7 +72,7 @@
 
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.208"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CreateEventsText" />
 
@@ -110,7 +125,11 @@
                 android:id="@+id/category"
                 android:layout_width="308dp"
                 android:layout_height="53dp"
-                android:inputType="none">
+                android:inputType="none"
+
+                android:background="@drawable/white_with_shadow_background"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="441dp">
 
             </AutoCompleteTextView>
 
@@ -136,25 +155,25 @@
             android:id="@+id/WhichPeopleCanComeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="24dp"
             android:fontFamily="@font/inter_bold"
             android:text="Кого вы хотели бы видеть?"
             android:textColor="#000000"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.247"
+            app:layout_constraintHorizontal_bias="0.179"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/time_select_button" />
+            app:layout_constraintTop_toBottomOf="@+id/Switch" />
 
         <ImageButton
             android:id="@+id/WomanWithMapImage"
             android:layout_width="199dp"
             android:layout_height="195dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="136dp"
-            android:background="@drawable/white_button"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="156dp"
+            android:background="@drawable/white_button_ligitblue_stroke"
             android:scaleType="centerCrop"
-            android:src="@drawable/travel"
+            android:src="@drawable/woman_with_flowers"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/WhichPeopleCanComeText" />
 
@@ -163,7 +182,7 @@
             android:layout_width="170dp"
             android:layout_height="73dp"
             android:layout_marginTop="36dp"
-            android:background="@drawable/white_with_blacklines"
+            android:background="@drawable/white_button_ligitblue_stroke"
             android:elevation="20dp"
             android:fontFamily="@font/inter_semibold"
             android:gravity="center"
@@ -181,7 +200,7 @@
             android:layout_width="195dp"
             android:layout_height="191dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/white_button"
+            android:background="@drawable/white_button_ligitblue_stroke"
             android:scaleType="centerCrop"
             android:src="@drawable/cinema"
             app:layout_constraintEnd_toEndOf="parent"
@@ -195,7 +214,7 @@
             android:layout_height="73dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="112dp"
-            android:background="@drawable/white_with_orange"
+            android:background="@drawable/white_button_ligitblue_stroke"
             android:elevation="20dp"
             android:fontFamily="@font/inter_semibold"
             android:gravity="center"
@@ -213,21 +232,21 @@
             android:layout_width="195dp"
             android:layout_height="191dp"
             android:layout_marginTop="96dp"
-            android:background="@drawable/white_button"
+            android:background="@drawable/white_button_ligitblue_stroke"
 
             android:scaleType="centerCrop"
-            android:src="@drawable/cooking"
+            android:src="@drawable/camping_picture"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.101"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/MenButton" />
+            app:layout_constraintTop_toBottomOf="@+id/ManButton" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/AllButton"
             android:layout_width="170dp"
             android:layout_height="73dp"
             android:layout_marginTop="28dp"
-            android:background="@drawable/white_with_greenlines"
+            android:background="@drawable/white_button_ligitblue_stroke"
             android:elevation="20dp"
             android:fontFamily="@font/inter_semibold"
             android:gravity="center"
@@ -246,7 +265,7 @@
             android:layout_width="160dp"
             android:layout_height="67dp"
             android:layout_marginTop="28dp"
-            android:background="@drawable/newblack"
+            android:background="@drawable/lightblue_for_all"
             android:elevation="150dp"
             android:text="Дата события"
             android:textColor="#FFFFFF"
@@ -257,46 +276,43 @@
 
 
         <TextView
-            android:id="@+id/date_textview"
+            android:id="@+id/dateTextview"
             android:layout_width="157dp"
             android:layout_height="52dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/white_button"
-            android:elevation="10dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/white_with_shadow_background"
             android:fontFamily="@font/inter_bold"
             android:gravity="center"
-            android:text="-"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.629"
+            app:layout_constraintHorizontal_bias="0.388"
             app:layout_constraintStart_toEndOf="@+id/SelectDate"
             app:layout_constraintTop_toBottomOf="@+id/WhenMeetingWillBeText" />
 
         <TextView
-            android:id="@+id/time_textview"
-            android:layout_width="117dp"
-            android:layout_height="54dp"
+            android:id="@+id/timeTextview"
+            android:layout_width="160dp"
+            android:layout_height="56dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="44dp"
-            android:background="@drawable/white_button"
-            android:elevation="10dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/white_with_shadow_background"
             android:fontFamily="@font/inter_bold"
             android:gravity="center"
-            android:text="-"
+
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.268"
-            app:layout_constraintStart_toEndOf="@+id/time_select_button"
-            app:layout_constraintTop_toBottomOf="@+id/date_textview" />
+            app:layout_constraintHorizontal_bias="0.039"
+            app:layout_constraintStart_toEndOf="@+id/timeSelectButton"
+            app:layout_constraintTop_toBottomOf="@+id/dateTextview" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/time_select_button"
+            android:id="@+id/timeSelectButton"
             android:layout_width="157dp"
-            android:layout_height="65dp"
+            android:layout_height="67dp"
             android:layout_marginTop="24dp"
-            android:background="@drawable/newblack"
+            android:background="@drawable/lightblue_for_all"
             android:text="Время события"
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
@@ -310,15 +326,19 @@
             android:layout_width="311dp"
             android:layout_height="52dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:paddingTop="30dp"
             android:stepSize="1.0"
             android:valueFrom="12"
-            android:valueTo="80"
+            android:valueTo="70"
+            app:haloColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/AgeText"
+            app:thumbColor="#000000"
+            app:tickColor="#000000"
+            app:trackColor="#FFFFFF"
             app:values="@array/rangeSlider" />
 
         <TextView
@@ -335,16 +355,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/AllImage" />
 
-        <ImageView
-            android:id="@+id/ChildrenImage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="36dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/RangeSlider"
-            app:srcCompat="@drawable/children" />
-
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
             android:layout_width="wrap_content"
@@ -352,28 +362,18 @@
             android:orientation="vertical"
             app:layout_constraintGuide_begin="20dp" />
 
-        <ImageView
-            android:id="@+id/GrangmaImage"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="28dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/RangeSlider"
-            app:srcCompat="@drawable/grandmother" />
-
         <EditText
-            android:id="@+id/min_member_number"
+            android:id="@+id/minMemberNumber"
             android:layout_width="228dp"
             android:layout_height="43dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/drawarectangle"
             android:ems="10"
             android:gravity="center"
             android:hint="От"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/NumberPeopleText" />
 
@@ -381,19 +381,19 @@
             android:id="@+id/NumberPeopleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="28dp"
             android:fontFamily="@font/inter_bold"
-            android:textColor="#000000"
-            android:textSize="22sp"
             android:text="Количество участников"
 
+            android:textColor="#000000"
+            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.156"
+            app:layout_constraintHorizontal_bias="0.176"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ChildrenImage" />
+            app:layout_constraintTop_toBottomOf="@+id/timeSelectButton" />
 
         <EditText
-            android:id="@+id/max_member_number"
+            android:id="@+id/maxMemberNumber"
             android:layout_width="228dp"
             android:layout_height="43dp"
             android:layout_marginStart="20dp"
@@ -409,86 +409,66 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.427"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/min_member_number" />
+            app:layout_constraintTop_toBottomOf="@+id/minMemberNumber" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/Switch"
             android:layout_width="342dp"
             android:layout_height="48dp"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="20dp"
             android:layout_marginBottom="24dp"
             android:checked="false"
             android:fontFamily="@font/inter_semibold"
             android:foregroundGravity="center"
             android:text="Неограниченное количество участников"
-
+            android:theme="@style/SCBSwitch"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/max_member_number"
-            app:layout_constraintVertical_bias="0.039" />
+            app:layout_constraintTop_toBottomOf="@+id/maxMemberNumber"
+            app:layout_constraintVertical_bias="0.011" />
 
         <EditText
             android:id="@+id/eventDescription"
-            android:layout_width="285dp"
-            android:layout_height="154dp"
-            android:layout_marginTop="116dp"
-            android:background="@drawable/white_with_grey"
+            android:layout_width="269dp"
+            android:layout_height="124dp"
+            android:layout_marginTop="104dp"
+            android:background="@drawable/white_with_shadow_background"
             android:ems="10"
             android:fontFamily="@font/montserrat"
             android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/black"
             android:hint="@string/EventDescription"
-            android:inputType="text"
+            android:inputType="textMultiLine"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.379"
+            app:layout_constraintHorizontal_bias="0.411"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Switch" />
+            app:layout_constraintTop_toBottomOf="@+id/RangeSlider" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_create_event"
+            android:id="@+id/buttonCreateEvent"
             android:layout_width="329dp"
             android:layout_height="72dp"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/blackbutton"
             android:text="Создать событие"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintHorizontal_bias="0.343"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/eventDescription" />
-
-        <ImageButton
-            android:id="@+id/imageButton12"
-            android:layout_width="38dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="48dp"
-
-            android:layout_marginBottom="4dp"
-            android:background="#FFFFFF"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toTopOf="@+id/button_create_event"
-            app:layout_constraintStart_toStartOf="@+id/imageButton13"
-            app:srcCompat="@drawable/people" />
-
-        <ImageButton
-            android:id="@+id/imageButton13"
-            android:layout_width="46dp"
-            android:layout_height="46dp"
-            android:layout_marginEnd="204dp"
-            android:layout_marginBottom="4dp"
-            android:background="@color/white"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toTopOf="@+id/button_create_event"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/network" />
+            app:layout_constraintTop_toBottomOf="@+id/eventDescription"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/textView25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="36dp"
+            android:layout_marginBottom="16dp"
             android:fontFamily="@font/inter_bold"
             android:text="Осталось совсем немного"
             android:textColor="#000000"
@@ -497,17 +477,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.262"
             app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="12dp"
-            android:text="TextView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/eventDescription" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
