@@ -47,13 +47,21 @@ public class OneEventActivity extends AppCompatActivity {
 
     private void setListeners() {
         activityOneEventBinding.buttonBack.setOnClickListener(v -> onClickBack());
+        activityOneEventBinding.checkMembers.setOnClickListener(v -> viewMembers());
+    }
+
+    private void viewMembers() {
+        Intent intent = new Intent(getApplicationContext(), ViewMembersActivity.class);
+        intent.putExtra(Constants.KEY_EVENT, currentEvent);
+        intent.putExtra("PreviousEventCategory", previousEventCategory);
+        startActivity(intent);
     }
 
     private void onClickBack() {
-        if(previousEventCategory.equals("myEvents")) {
-            startActivity(new Intent(getApplicationContext(), MyEventsActivity.class));
-        } else if(previousEventCategory.isEmpty()) {
+        if(previousEventCategory == null) {
             startActivity(new Intent(getApplicationContext(), TheMostMainActivity.class));
+        }else if(previousEventCategory.equals("myEvents")) {
+            startActivity(new Intent(getApplicationContext(), MyEventsActivity.class));
         } else {
             Intent intent = new Intent(getApplicationContext(), EventsActivity.class);
             intent.putExtra(Constants.KEY_SELECTED_CATEGORY, previousEventCategory);

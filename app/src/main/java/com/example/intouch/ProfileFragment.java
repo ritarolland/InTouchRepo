@@ -8,6 +8,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -99,6 +101,8 @@ public class ProfileFragment extends Fragment {
                 fragmentProfileBinding.profileImage.setImageBitmap(getProfileImage(user.profileImage));
             }
         });
+        fragmentProfileBinding.textViewemail.setText(Html.fromHtml("<a href = \"mailto:megatroxx@mail.ru\"> Send Feedback </a>"));
+        fragmentProfileBinding.textViewemail.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     private void init() {

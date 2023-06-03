@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
+
     tools:context=".activities.OneEventActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="#8AC2DC">
 
         <ImageButton
@@ -38,12 +39,12 @@
         <ImageView
             android:id="@+id/imageView39"
             android:layout_width="391dp"
-            android:layout_height="729dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="770dp"
+            android:layout_marginTop="178dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/category"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/white_just_white" />
 
         <ImageView
@@ -211,19 +212,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView49" />
 
+        <TextView
+            android:id="@+id/checkMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/NumberPeople"
+            android:layout_marginTop="16dp"
+            android:text="@string/check_members"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
 
         <TextView
             android:id="@+id/eventDescription"
             android:layout_width="278dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="16dp"
             android:text="TextView"
             android:textColor="#6C6C6C"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+            app:layout_constraintTop_toBottomOf="@+id/checkMembers" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/respondButton"
@@ -234,9 +248,10 @@
             android:text="Откликнуться"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="28dp"
+            app:layout_constraintTop_toBottomOf="@+id/eventDescription"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />/>
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
