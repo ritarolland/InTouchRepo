@@ -70,6 +70,7 @@ public class EventsActivity extends AppCompatActivity implements EventTouchListe
                     events.add(event);
                 }
                 eventsAdapter.notifyDataSetChanged();
+                activityEventsBinding.eventsRecycler.smoothScrollToPosition(0);
             }
 
             @Override
