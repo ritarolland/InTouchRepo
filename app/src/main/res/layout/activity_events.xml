@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="4dp"
+    android:padding="16dp"
+    android:background="@color/gray_back"
     tools:context=".activities.EventsActivity">
 
-    <Button
+    <ImageButton
         android:id="@+id/button_back"
-        android:layout_width="40dp"
+        android:layout_width="50dp"
         android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/back_button"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        tools:ignore="SpeakableTextPresentCheck"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/events_recycler"
@@ -20,8 +23,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/button_back"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_marginTop="15dp"/>
 

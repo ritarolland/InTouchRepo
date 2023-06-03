@@ -97,6 +97,7 @@
             android:layout_marginTop="32dp"
             android:backgroundTint="#000000"
             android:ems="10"
+            android:textColorHint="@color/hint"
             android:hint="Название"
             android:inputType="text"
             android:textColor="#000000"
@@ -126,7 +127,8 @@
                 android:layout_width="308dp"
                 android:layout_height="53dp"
                 android:inputType="none"
-
+                android:hint="Категория"
+                android:textColorHint="@color/hint"
                 android:background="@drawable/white_with_shadow_background"
                 tools:layout_editor_absoluteX="36dp"
                 tools:layout_editor_absoluteY="441dp">
@@ -438,6 +440,7 @@
             android:fontFamily="@font/montserrat"
             android:gravity="center"
             android:padding="8dp"
+            android:textColorHint="@color/hint"
             android:textColor="@color/black"
             android:hint="@string/EventDescription"
             android:inputType="textMultiLine"

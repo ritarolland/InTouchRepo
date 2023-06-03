@@ -20,6 +20,7 @@
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
     <color name="gray_back">#F0F0F0</color>
+    <color name="pale_pale_blue">#78B2DB</color>
 
     <color name="blue">#00EFFF</color>
 </resources>

@@ -22,11 +22,13 @@
         android:id="@+id/friend_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/montserrat_semibold"
         app:layout_constraintTop_toTopOf="parent"
-        android:textSize="20sp"
-        android:layout_marginTop="15dp"/>
+        android:textSize="24sp"
+        android:layout_marginTop="8dp"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -50,7 +52,10 @@
         android:hint="@string/enter_message"
         android:background="@drawable/white_button"
         android:paddingStart="16dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat"
         android:paddingEnd="16dp"
+        android:textColorHint="@color/hint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
