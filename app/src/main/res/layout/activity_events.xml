@@ -8,6 +8,19 @@
     android:background="@color/gray_back"
     tools:context=".activities.EventsActivity">
 
+    <TextView
+        android:id="@+id/categoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"/>
+
     <ImageButton
         android:id="@+id/button_back"
         android:layout_width="50dp"

@@ -171,24 +171,24 @@ public class AddEventActivity extends AppCompatActivity {
 
     public void ClickWoman(View view){
         binding.WomanButton.setBackgroundResource(R.drawable.woman_backgroud);
-        binding.ManButton.setBackgroundResource(R.drawable.white_with_orange);
-        binding.AllButton.setBackgroundResource(R.drawable.white_with_greenlines);
+        binding.ManButton.setBackgroundResource(R.drawable.white_button_ligitblue_stroke);
+        binding.AllButton.setBackgroundResource(R.drawable.white_button_ligitblue_stroke);
         newEvent.onlyGirls = true;
         newEvent.onlyBoys = false;
 
     }
     public void ClickMan(View view){
-        binding.ManButton.setBackgroundResource(R.drawable.man_background);
-        binding.WomanButton.setBackgroundResource(R.drawable.white_with_blacklines);
-        binding.AllButton.setBackgroundResource(R.drawable.white_with_greenlines);
+        binding.ManButton.setBackgroundResource(R.drawable.woman_backgroud);
+        binding.WomanButton.setBackgroundResource(R.drawable.white_button_ligitblue_stroke);
+        binding.AllButton.setBackgroundResource(R.drawable.white_button_ligitblue_stroke);
         newEvent.onlyBoys = true;
         newEvent.onlyGirls = false;
 
     }
     public void ClickAll(View view){
-        binding.WomanButton.setBackgroundResource(R.drawable.white_with_blacklines);
-        binding.ManButton.setBackgroundResource(R.drawable.white_with_orange);
-        binding.AllButton.setBackgroundResource(R.drawable.all_background);
+        binding.WomanButton.setBackgroundResource(R.drawable.white_button_ligitblue_stroke);
+        binding.ManButton.setBackgroundResource(R.drawable.white_button_ligitblue_stroke);
+        binding.AllButton.setBackgroundResource(R.drawable.woman_backgroud);
         newEvent.onlyBoys = false;
         newEvent.onlyGirls = false;
 

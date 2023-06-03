@@ -53,6 +53,10 @@ public class EventsActivity extends AppCompatActivity implements EventTouchListe
         eventsAdapter = new EventsAdapter(events, this);
         activityEventsBinding.eventsRecycler.setAdapter(eventsAdapter);
         eventCategory = getIntent().getStringExtra(Constants.KEY_SELECTED_CATEGORY);
+        if (eventCategory != null) {
+            activityEventsBinding.categoryText.setText(eventCategory);
+        } else activityEventsBinding.categoryText.setText("Все");
+
     }
 
 
