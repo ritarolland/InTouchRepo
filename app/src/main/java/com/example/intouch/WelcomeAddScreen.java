@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -19,6 +21,9 @@ public class WelcomeAddScreen extends AppCompatActivity {
 
 
 
+
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -28,7 +33,7 @@ public class WelcomeAddScreen extends AppCompatActivity {
                 finish();
             }
 
-        }, 2500);
+        }, 3000);
 
 
 
