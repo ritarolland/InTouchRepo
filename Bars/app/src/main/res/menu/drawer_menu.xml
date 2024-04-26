@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_politik"
+        android:icon="@drawable/speech"
+        android:title="Политика" />
+    <item
+        android:id="@+id/nav_economic"
+        android:icon="@drawable/macroeconomics"
+        android:title="Экономика" />
+    <item
+        android:id="@+id/nav_currency"
+        android:icon="@drawable/currencies"
+        android:title="Валюта" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/user"
+        android:title="Профиль">
+
+    </item>
+
+</menu>

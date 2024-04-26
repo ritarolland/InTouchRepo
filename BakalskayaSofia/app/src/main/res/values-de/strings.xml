@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BakalskayaSofia</string>
+    <string name="ChooseTime">Wahlen Sie die Jahrzeit aus:</string>
+    <string name="Winter">Winter</string>
+    <string name="Autumn">Herbst</string>
+    <string name="Summer">Sommer</string>
+    <string name="Spring">Fruhling</string>
+
+
+</resources>
